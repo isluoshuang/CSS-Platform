@@ -2,7 +2,7 @@
 import hashlib
 import json
 
-import datetime
+
 from flask import Flask
 from flask import make_response
 from flask import redirect
@@ -10,49 +10,41 @@ from flask import render_template
 from flask import request
 from flask_cors import CORS
 
-# from flask import jsonify, request, render_template, send_from_directory, session
-# from time import time
-# # from flask_pymongo import PyMongo, DESCENDING, ASCENDING
-# import pandas as pd
-# import time
-# from bson import json_util
-# from uuid import uuid1
-# from xlrd import open_workbook
-
-from flask import jsonify, request, abort, url_for, render_template, redirect
+from flask import Flask, jsonify, request, render_template, send_from_directory, session
 from time import time
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, DESCENDING, ASCENDING
 
-# from urllib import parse as urlparse
+
 
 import sys
-# import pandas as pd
+import pandas as pd
 import jieba.analyse
 
-# import sys
+import sys
 import db
 
 # import wechatsogou
 import os
-# from hashlib import md5
+from hashlib import md5
 
-# import requests
+import requests
 
 from sklearn.decomposition import PCA as sklearnPCA
-# from matplotlib import pyplot as plt
-# import csvpy
+from matplotlib import pyplot as plt
+import csv
 from sklearn import preprocessing
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.manifold import TSNE as sklearnTSNE
 from sklearn.cluster import KMeans
-# from textblob import TextBlob
+from textblob import TextBlob
 
-# import re, collections
+import re, collections
 
-# from flask import send_file, send_from_directory
+from flask import send_file, send_from_directory
 
-# from numpy import array, zeros, argmin, inf, equal, ndim
-# # from scipy.spatial.distance import cdist
-# from sklearn.metrics.pairwise import euclidean_distances
+from numpy import array, zeros, argmin, inf, equal, ndim
+# from scipy.spatial.distance import cdist
+from sklearn.metrics.pairwise import euclidean_distances
 
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
@@ -72,10 +64,10 @@ from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
 
 from os import path
-# from PIL import Image
+from PIL import Image
 import numpy as np
 
-# from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 from pdfminer.pdfparser import PDFParser, PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
@@ -87,17 +79,28 @@ from scipy.interpolate import lagrange#拉格朗日函数
 import warnings
 warnings.filterwarnings("ignore")
 
-# from minepy import MINE
-import numpy as np
-
+from minepy import MINE
+# import numpy as np
+import pymongo
 from pymongo import MongoClient
 import hashlib
 import sys
-import datetime
-
+# user = "root"
+# password = "ls269031126"
 charset = "utf8"
 
 app = Flask(__name__)
+
+app.secret_key = 'zju'
+app.config['MONGO_DBNAME'] = 'question'
+
+app.config['MONGO_URI'] = 'mongodb://qs:double@10.72.100.5:8027/question'
+
+app.url_map.strict_slashes = False
+
+mongo = PyMongo(app)
+
+
 
 
 # CORS(app)
@@ -132,7 +135,7 @@ def upload(name):
     print(state)
     print(loginName)
     # return 'http://0.0.0.0/'
-    return 'http://183.134.76.200:8081/'
+    return 'https://mo.zju.edu.cn/css/'
 
 #PCA降维
 @app.route('/pca/<name>', methods=['post', 'get'])
@@ -882,50 +885,53 @@ def polydata(name):
     ret = {"route": csv_file[0:-4]+'.csv'}
     return json.dumps(ret)
 
-# #计算两个序列的最大信息系数MIC
-# @app.route('/MIC/<name>', methods=['post', 'get'])
-# def MIC(name):
-#     # pip install minepy
-#     fileN = db.searchFile(name)
-#     isfile = fileN[0]['filename']
-#     # print(fileN)
-#     if isfile == "dont_have_file":
-#         ret = {"route": "nofile"}
-#         return json.dumps(ret)
+#计算两个序列的最大信息系数MIC
+@app.route('/MIC/<name>', methods=['post', 'get'])
+def MIC(name):
+    # pip install minepy
+    fileN = db.searchFile(name)
+    isfile = fileN[0]['filename']
+    # print(fileN)
+    if isfile == "dont_have_file":
+        ret = {"route": "nofile"}
+        return json.dumps(ret)
 
-#     if len(fileN) < 2:
-#         ret = {"route": '需要上传两个文件以进行MIC计算'}
-#         return json.dumps(ret)
-#     x=[]
-#     y=[]
-#     file1 = fileN[0]['filename']
-#     file2 = fileN[1]['filename']
-#     csvFile1 = open(name + '/'+ file1)
-#     csv_file1 = csv.reader(csvFile1)
-#     for content in csv_file1:
-#         content = list(map(float,content))
-#         if len(content)!=0:
-#             x.append(float(content[0]))
-#     csvFile1.close()
-#     print('x=',x)
-#     csvFile2 = open(name + '/'+ file2)
-#     csv_file2 = csv.reader(csvFile2)
-#     for content in csv_file2:
-#         content = list(map(float,content))
-#         if len(content)!=0:
-#             y.append(float(content[0]))
-#     csvFile2.close()
-#     print('y=',y)
-#     mine = MINE(alpha = 0.6, c = 15)
-#     mine.compute_score(x, y)
-#     print("MIC", mine.mic())
-#     #将MIC值写入文件
-#     with open(name + '/'+ 'MIC_result.csv', 'w', newline='') as new_file:
-#         csv_writer = csv.writer(new_file)
-#         csv_writer.writerow(["MIC"])
-#         csv_writer.writerow(mine.mic())
-#     ret = {"route": 'MIC_result.csv'}
-#     return json.dumps(ret)
+    if len(fileN) < 2:
+        ret = {"route": '需要上传两个文件以进行MIC计算'}
+        return json.dumps(ret)
+    x=[]
+    y=[]
+    file1 = fileN[0]['filename']
+    file2 = fileN[1]['filename']
+    csvFile1 = open(name + '/'+ file1, encoding='utf-8-sig')
+    csv_file1 = csv.reader(csvFile1)
+    for content in csv_file1:
+        print(content)
+        content = list(map(float,content))
+        if len(content)!=0:
+            x.append(float(content[0]))
+    csvFile1.close()
+    print('x=',x)
+    csvFile2 = open(name + '/'+ file2, encoding='utf-8-sig')
+    csv_file2 = csv.reader(csvFile2)
+    for content in csv_file2:
+        content = list(map(float,content))
+        if len(content)!=0:
+            y.append(float(content[0]))
+    csvFile2.close()
+    print('y=',y)
+    mine = MINE(alpha = 0.6, c = 15)
+    mine.compute_score(x, y)
+    print("MIC", mine.mic())
+    #将MIC值写入文件
+    with open(name + '/'+ 'MIC_result.csv', 'w', newline='') as new_file:
+        csv_writer = csv.writer(new_file)
+        csv_writer.writerow(["MIC result"])
+        data = []
+        data.append(str(mine.mic()))
+        csv_writer.writerow(data)
+    ret = {"route": 'MIC_result.csv'}
+    return json.dumps(ret)
 
 #下载处理完成的文件
 @app.route('/download/<name>/<filename>',  methods=['post', 'get'])
@@ -1204,18 +1210,18 @@ def getSentiment():
     return json.dumps(results)
 
 
-@app.route('/searchArticle/', methods=["POST"])
-def searchArticle():
-    data = request.get_json() #bytes
-    article = data["data"];
-    print(article)
-    ws_api = wechatsogou.WechatSogouAPI(captcha_break_time=3)
-    data_receive = ws_api.search_article(article, identify_image_callback=identify_image_callback_ruokuai_sogou)
-    results = []
-    for i in data_receive:
-        print(i)
-        results.append(i)
-    return json.dumps(results)
+# @app.route('/searchArticle/', methods=["POST"])
+# def searchArticle():
+#     data = request.get_json() #bytes
+#     article = data["data"];
+#     print(article)
+#     ws_api = wechatsogou.WechatSogouAPI(captcha_break_time=3)
+#     data_receive = ws_api.search_article(article, identify_image_callback=identify_image_callback_ruokuai_sogou)
+#     results = []
+#     for i in data_receive:
+#         print(i)
+#         results.append(i)
+#     return json.dumps(results)
 
 #登陆界面，检查用户名是否存在，若不存在则直接注册
 @app.route('/login/',methods=["POST"])
@@ -1231,22 +1237,187 @@ def login():
     ret = {"status": state["state"]}
     return json.dumps(ret)
 
-##############################################################################
-@app.route('/databaseList/',methods=["get"])
-def databaseList():
-    databaseList = db.databaseList()
-    print(databaseList)
-    database_return_list = []
-    for i in databaseList:
-        database_return = {}
-        database_return["name"] = i["name"]
-        database_return["introduction"] = i["introduction"]
-        database_return["open"] = i["open"]
-        database_return_list.append(database_return)
-    return json.dumps(database_return_list)
+@app.route('/get_form_completion/<user>/<num>/<qid>', methods=['GET'])
+def get_form_completion(user,num,qid):
+    result = db.user_result(user,num)
+    ret = []
+    for i in result:
+        ret.append(
+            i['question'][qid]
+        )
+    print(ret)
+    return json.dumps(ret)
+
+@app.route('/get_mic_data', methods=['GET','POST'])
+def MICvalue():
+    choice_user = request.get_json()  # 获取前端用户选择的数据
+    flag = True
+    # data = request.get_json() #bytes
+    # print(data)
+    choice0 = {}
+    choice1 = {}
+    # choice[0]['db'] = data[0][db]
+    # choice[0]['col'] = data[0][col]
+    # choice[0]['field'] = data[0][field]
+    # choice[1]['db'] = data[1][db]
+    # choice[1]['col'] = data[1][col]
+    # choice[1]['field'] = data[1][field]
+    choice0['db'] = choice_user[0][0]
+    choice0['col'] = choice_user[0][1]
+    choice0['field'] = choice_user[0][2]
+    choice1['db'] = choice_user[1][0]
+    choice1['col'] = choice_user[1][1]
+    choice1['field'] = choice_user[1][2]
+    print("choice0", choice0)
+    print("choice1", choice1)
+    # choice0['db'] = 'EpidemicData'
+    # choice0['col'] = '上海'
+    # choice0['field'] = '新增确诊'
+    # choice1['db'] = 'EpidemicData'
+    # choice1['col'] = '河北'
+    # choice1['field'] = '新增确诊'
+    # print(choice0)
+    # print(choice1)
+
+    # 获取数据
+    # client = MongoClient("10.72.100.5",8027,username='double',password='double')
+    client = MongoClient("10.72.100.5",8027)
+    db = client.admin
+    db.authenticate("double", "double")
+    conn = MongoClient(host='mongodb://10.72.100.5:8027/'+'admin',username='double',password='double')
+    database = conn[choice0['db']]
+    collection0 = database[choice0['col']]
+    results0 = collection0.find({},{choice0['field']:1,"_id":0}).sort("_id",pymongo.ASCENDING)   # 按照_id排序
+    collection1 = database[choice1['col']]
+    results1 = collection1.find({},{choice1['field']:1,"_id":0}).sort("_id",pymongo.ASCENDING)   # 按照_id排序
+    # 1表示显示此字段，0表示不显示此字段，默认会显示_id
+    rawdata0 = []
+    rawdata1 = []
+    for result in results0:
+        rawdata0.append(result[choice0['field']])
+    for result in results1:
+        rawdata1.append(result[choice1['field']])
+
+    # 清理数据
+    for i in range(len(rawdata0)-1,-1,-1):   # 假定rawdata0与rawdata1的长度相同
+        if rawdata0[i] and rawdata1[i]:
+            try:   # 将数字形式的数据转换为浮点数
+                rawdata0[i] = float(rawdata0[i])
+                rawdata1[i] = float(rawdata1[i])
+            except ValueError:
+                flag = False   # 存在非数值字段
+        else:
+            del rawdata0[i]
+            del rawdata1[i]
+
+    print("rawdata0", rawdata0)
+    print("rawdata1", rawdata1)
+    # 计算MIC
+    m = MINE()
+    if rawdata0:   # 当rawdata0与rawdata1不为空时
+        if flag:
+            # 将数据映射到[0,1]区间
+            min_max_scaler = MinMaxScaler()
+            data1_std = min_max_scaler.fit_transform(np.array(rawdata0).reshape(-1, 1))
+            data2_std = min_max_scaler.fit_transform(np.array(rawdata1).reshape(-1, 1))
+            data1 = data1_std.reshape(1,-1)[0]
+            data2 = data2_std.reshape(1,-1)[0]
+            m.compute_score(data1,data2)
+            # str(m.mic())
+            return json.dumps(m.mic())
+        else:
+            return "请选取数值字段"
+    else:
+        return "您所选取的两个字段无对应数据"
+
+# 获取options
+@app.route('/getOptions', methods=['post', 'get'])
+def getOptions():
+    client = MongoClient("10.72.100.5",8027)
+    db = client.admin
+    db.authenticate("double", "double")
+    dblist = client.list_database_names()   # 服务器上除系统数据库外的所有数据库
+    print('所有的数据库：', dblist)
+    j = 0 
+    for i in range(len(dblist)):
+        if dblist[j] == 'admin':
+            dblist.pop(j)
+        elif dblist[j] == 'config':
+            dblist.pop(j)
+        elif dblist[j] == 'local':
+            dblist.pop(j)
+        else:
+            j += 1
+    print(dblist)
+    options_list = []
+    for i in range(len(dblist)):    
+        db = dblist[i]
+        database = client[db]
+        collection_list = database.list_collection_names()   # 指定数据库中的所有集合
+        
+        child_list0 = []
+        for j in range(len(collection_list)):
+            coll = collection_list[j]
+            collection = database[coll]
+            document = collection.find_one()
+            field_list = list(document.keys())[1:]   # 指定数据库中的所有字段(除了"_id")
+            
+            child_list1 = []
+            for k in range(len(field_list)):
+                child_list1.append({'value':field_list[k],'label':field_list[k]})
+                
+            child_list0.append({'value':collection_list[j],'label':collection_list[j],'children':child_list1})
+            
+        options_list.append({'value':dblist[i],'label':dblist[i],'children':child_list0})
+   
+    return json.dumps(options_list)
+
+#博文信息
+# @app.route('/API/getStu/<id>')
+# def getStu(id=id):
+#     result = db.get_stu_info(id)
+#     #id,title,type,pubTime
+#     ret = []
+#     for i in result:
+#         ret.append({
+#             "id": i[0],
+#             "name": i[1],
+#             "age": i[2],
+#             "sex": i[3],
+#             "birthtime": i[4].strftime("%Y-%m-%d"),
+#             "class": i[5],
+#             "address": i[6],
+#             "tel":i[7]
+#         })
+#     print "ret"+json.dumps(ret)
+#     return json.dumps(ret)
+
+# @app.route('/favicon.ico')
+# def favicon(id=id):
+#     return app.send_static_file("./static/favicon.ico")
+
+# # token <=> password id
+# # verifyToken return isUser userId
+# #验证账户
+# def verifyToken(token):
+#     SQLresult = db.verifyToken()
+#     if token == None:
+#         return False, "null"
+#     for i in SQLresult:
+#         print i
+#         if token == genCookie(i[0]):
+#             return True, i[1]
+#     return False, "null"
 
 
+# #加密
+# def genCookie(passMd5):
+#     today = datetime.date.today()
+#     Md5 = hashlib.md5()
+#     Md5.update(passMd5 + today.strftime("%Y/%m/%d"))
+#     Md5hex = Md5.hexdigest()
+#     return Md5hex
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=False, port=8080)
+    app.run(host="127.0.0.1", debug=False, port=8025)

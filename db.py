@@ -15,10 +15,8 @@ charset = "utf8"
 
 #连接数据库
 def open():
-    conn = MongoClient()
-    print("conn\n")
-    print(conn)
-    # conn = MongoClient(host='mongodb://localhost:27017',username='root',password='root')
+    # conn = MongoClient()
+    conn = MongoClient(host='mongodb://10.72.100.5:8027/question',username='qs',password='double')
     return conn
 
 #断开数据库连接
@@ -164,7 +162,7 @@ def searchFile(name):
     result = list(result[:])
     print(result)
     if len(result) == 0:
-        state = [{"filename": "dont_have_file"}]
+        state = [{"filename": "donot_have_file"}]
         return state
     else:
         filename = []
@@ -185,16 +183,25 @@ def deleteFile(name, fileName):
     mycol.delete_many(myquery)
     return
 
-#####################################################
-def databaseList():
+def user_result(user, num):
     conn = open()
     mydb = conn[database]
-    mycol = mydb["databaseList"]
-    database_list = mycol.find()
-    database_list = list(database_list[:])
-    return database_list
+    mycol = mydb["choose"]
+    myquery = {"num":int(num) }
+    result = mycol.find(myquery)
+    result = list(result[:])
+    # print(result)
+    return result
 
-
+# def college_result(college_num):
+#     conn = open()
+#     mydb = conn[database]
+#     mycol = mydb["choose"]
+#     myquery = {"num":college_num}
+#     result = mycol.find(myquery)
+#     result = list(result[:])
+#     print(result)
+#     return
 #获取帐号密码
 # def APIlogin(result):
 #     conn, cursor = open()

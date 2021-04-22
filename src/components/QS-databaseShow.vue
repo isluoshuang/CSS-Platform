@@ -115,7 +115,7 @@ export default {
       let that = this
         $.ajax({  
             type:"get",//type可以为post也可以为get  
-            url: "../databaseList/",  
+            url: "/css/databaseList",  
             data: {},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
             contentType: 'application/json; charset=UTF-8',
             dataType:"json",//这里要注意如果后台返回的数据不是json格式，那么就会进入到error:function(data){}中  

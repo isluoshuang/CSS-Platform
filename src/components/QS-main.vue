@@ -4,8 +4,8 @@
   <el-container id="outside">
     <el-main>
       <div id="introduce">
-        <div id="txt1">欢迎来到社会计算科学研究平台</div>
-        <div id="txt2">社会计算科学研究平台旨在探索如何基于海量数据与新兴计算技术，研究公共管理等诸多社会学科基本命题与研究范式问题，它阐释了社会科学研究在新技术情景下所呈现的新发展、新动态和前景。</div>
+        <div id="txt1">欢迎来到计算社会科学研究平台</div>
+        <div id="txt2">计算社会科学研究平台旨在探索如何基于海量数据与新兴计算技术，研究公共管理等诸多社会学科基本命题与研究范式问题，它阐释了社会科学研究在新技术情景下所呈现的新发展、新动态和前景。</div>
         <div id="txt3">现有功能：自动问卷系统 (创建问卷，发送问卷给他人填写，并分析问卷结果)；自然语言处理 (提供不同的文本分析方法，例如文本情感分析)；计算服务 (应用多种数据分析和机器学习方法来提取数据有用的信息) 。</div>
       </div>
       <div id="link1">
@@ -44,7 +44,7 @@
         <div id="aside3">
           <img class="logo1" src="../../static/icon/icon_3.png">
           <div id="txt8">
-           <a href="https://mo.zju.edu.cn/dataset">平台现有数据集</a>
+           <a href="https://mo.zju.edu.cn/dataset">公开数据集</a>
           </div>
         </div>   
       </div>

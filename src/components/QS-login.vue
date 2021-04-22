@@ -101,7 +101,7 @@ export default {
           var flag = false;
           $.ajax({  
               type:"POST",//type可以为post也可以为get  
-              url: "../login/",  
+              url: "/css/login",  
               data:
                 JSON.stringify(send_data)
               ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  

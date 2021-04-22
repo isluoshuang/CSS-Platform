@@ -1,7 +1,7 @@
 import db
 
-username = "uncleyuan"
-password = "uncleyuan"
+username = "double"
+password = "double"
 if __name__ == "__main__":
     db.createUser()
     print "Successfully create user table."

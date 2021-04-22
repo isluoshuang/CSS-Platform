@@ -2,7 +2,6 @@
 <template>
   <el-main>
   <div class="qs">
-
     <el-upload
       class="upload"
       drag
@@ -142,13 +141,23 @@
 
     <el-row>
       <el-button type="primary" icon="el-icon-download">
-        <a :href="'/download/'+username +'/' + download_file+''" download={{download_file}} style="text-decoration:none"><span style="color: white">下载文件</span></a>
+        <a :href="'/css/download/'+username +'/' + download_file+''" download={{download_file}} style="text-decoration:none"><span style="color: white">下载文件</span></a>
       </el-button>
     </el-row> 
   </div>
+
+    <el-row class = "box">
+      <el-col :span="6">
+        <el-tooltip class="item" effect="dark" content="点击跳转数据库字段MIC计算" placement="right">
+          <router-link :to="`/micCompute`">数据库MIC计算</router-link>
+        </el-tooltip>
+      </el-col>
+    </el-row>
+
   </el-main>
 </template>
 
+<script src="jquery.js"></script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -169,6 +178,12 @@ export default {
       download_file:'',
       username:'',
       Tnum:'',
+      database:'数据库',
+      databaseList:[],
+      value: [],
+      options: [],
+      value1: [],
+      mic_result: ''
     }
   },
   methods:{
@@ -183,8 +198,20 @@ export default {
       else{
         this.username = sessionStorage.getItem('user')
         // return "http://0.0.0.0/upload/"+user["user"]
-        return "http://10.72.100.5:8020/upload/"+user["user"]
+        return "https://mo.zju.edu.cn/css/upload/"+user["user"]
       }
+    },
+    changeDatabase(data){
+                    //console.log(data) //公司名-公司id
+                    // 处理点击时不选的错误
+                    if(typeof data == "object"){
+                        return
+                    }
+                    // 取公司名并赋值
+                    this.company = data.split('-')[0]
+
+                    // 存下公司id
+                    localStorage.setItem("workAccountId",data.split("-")[1])
     },
     handleRemove(file, fileList) {
       // let data = {}
@@ -192,7 +219,7 @@ export default {
       // console.log(file, fileList);
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../removeFile/"  + sessionStorage.getItem('user'),  
+          url: "/css/removeFile/"  + sessionStorage.getItem('user'),  
           data:
             JSON.stringify(file)
           ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
@@ -232,7 +259,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../pca/" + sessionStorage.getItem('user'),  
+          url: "/css/pca/" + sessionStorage.getItem('user'),  
           data:
             JSON.stringify(data)
           ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
@@ -267,7 +294,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../TSNE/" + sessionStorage.getItem('user'),  
+          url: "/css/TSNE/" + sessionStorage.getItem('user'),  
           data:
             JSON.stringify(data)
           ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
@@ -301,7 +328,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../kmeans/" + sessionStorage.getItem('user'),  
+          url: "/css/kmeans/" + sessionStorage.getItem('user'),  
           data:
             JSON.stringify(data)
           ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
@@ -335,7 +362,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../Ttest/" + sessionStorage.getItem('user'),  
+          url: "/css/Ttest/" + sessionStorage.getItem('user'),  
           data:
             JSON.stringify(data)
           ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
@@ -367,7 +394,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../dtw/" + sessionStorage.getItem('user'),  
+          url: "/css/dtw/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -403,7 +430,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../nb/" + sessionStorage.getItem('user'),  
+          url: "/css/nb/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -441,7 +468,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../wordCloud/" + sessionStorage.getItem('user'),  
+          url: "/css/wordCloud/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -472,7 +499,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../pdf2word/" + sessionStorage.getItem('user'),  
+          url: "/css/pdf2word/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -504,7 +531,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../MIC/" + sessionStorage.getItem('user'),  
+          url: "/css/MIC/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -547,7 +574,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../decisionTree/" + sessionStorage.getItem('user'),  
+          url: "/css/decisionTree/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -584,7 +611,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../randomForest/" + sessionStorage.getItem('user'),  
+          url: "/css/randomForest/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -621,7 +648,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../svm/" + sessionStorage.getItem('user'),  
+          url: "/css/svm/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -658,7 +685,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../svr/" + sessionStorage.getItem('user'),  
+          url: "/css/svr/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -695,7 +722,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../linearRegression/" + sessionStorage.getItem('user'),  
+          url: "/css/linearRegression/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -732,7 +759,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../logisticRegression/" + sessionStorage.getItem('user'),  
+          url: "/css/logisticRegression/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -769,7 +796,7 @@ export default {
       let that = this;
       $.ajax({  
           type:"POST",//type可以为post也可以为get  
-          url: "../polydata/" + sessionStorage.getItem('user'),  
+          url: "/css/polydata/" + sessionStorage.getItem('user'),  
           data:{},//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
           contentType: 'application/json; charset=UTF-8',
           dataType:"json",//这里要注意如果后台返回的数据不是json格式，会进入到error:function(data){}中  
@@ -878,5 +905,26 @@ export default {
   }
   .el-button--primary, .el-button--primary.is-plain {
     width: 170px;
+  }
+  .el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+  .demonstration {
+    display: block;
+    color: #8492a6;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .tab{
+    display: inline-block;
+    margin: 10px;
+    font-size:14px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    line-height:20px;
   }
 </style>

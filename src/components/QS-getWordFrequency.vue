@@ -78,7 +78,7 @@ export default {
         data["data"] = textarea;
         $.ajax({  
             type:"POST",//type可以为post也可以为get  
-            url: "../getWordFrequency/",  
+            url: "/css/getWordFrequency",  
             data:
               JSON.stringify(data)
             ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  

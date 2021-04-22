@@ -100,7 +100,7 @@ var _hmt = _hmt || [];
         var that = this;
         $.ajax({  
             type:"post",//type可以为post也可以为get  
-            url: "../list/",  
+            url: "/css/list",  
             data: JSON.stringify(user),//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  
             contentType: 'application/json; charset=UTF-8',
             dataType:"json",//这里要注意如果后台返回的数据不是json格式，那么就会进入到error:function(data){}中  
@@ -128,7 +128,7 @@ var _hmt = _hmt || [];
         // console.log(JSON.stringify(data_num))
         $.ajax({  
             type:"POST",//type可以为post也可以为get  
-            url: "../showData/",  
+            url: "/css/showData",  
             data:
               JSON.stringify(data_num)
             ,//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式  

@@ -34,8 +34,7 @@ const qsFreAnlysisPuc = resolve => require(['../components/QS-freAnlysisPuc'], r
 const qsGetSentiment = resolve => require(['../components/QS-getSentiment'], resolve)
 const qsLogin = resolve => require(['../components/QS-login'], resolve)
 const qsDatabaseShow = resolve => require(['../components/QS-databaseShow'], resolve)
-
-
+const qsMicCompute = resolve => require(['../components/QS-micCompute'], resolve)
 
 Vue.use(Router)
 
@@ -115,6 +114,11 @@ export default new Router({
       path: '/databaseShow',
       name: 'qsDatabaseShow',
       component: qsDatabaseShow
+    },
+    {
+      path: '/micCompute',
+      name: 'qsMicCompute',
+      component: qsMicCompute
     }
   ]
 })
