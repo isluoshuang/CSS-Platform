@@ -18,17 +18,17 @@
           "date": "2021年1月4日",
           "url":"https://mp.weixin.qq.com/s/kB4QlZVAaUSwCfk_Dq1odA"
         },,
+          {
+          "img": "https://mmbiz.qpic.cn/mmbiz_png/rUkydbX1SCTVeaM88UWRiaeW482GBU2BYIt5ruEYPjRy0EzbE3WszMgiaLINFrNI7vIW8YIt40JAxvcpGGWslc3Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
+          "title": "联邦学习、对比学习前沿方法学术沙龙预告",
+          "date": "2021年4月8号",
+          "url":"https://mp.weixin.qq.com/s/jp0cFxJoe4UuEQS5CBPeZA"
+        },,
     {
           "img": "https://mmbiz.qpic.cn/mmbiz_png/rUkydbX1SCRVFQY72RKVuqxKHfgvLibNpFCPV27sjA9tGKyGPLXdV4ibiczlv8flurtkY1OQ020peN7v7Yu7b46Vg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
           "title": "小样本元学习学术沙龙预告",
           "date": "2021年5月11日",
           "url":"https://mp.weixin.qq.com/s/vDDTCFkrC9WLkE9fobvjTg"
-        },,
-    {
-          "img": "https://mmbiz.qpic.cn/mmbiz_png/rUkydbX1SCTVeaM88UWRiaeW482GBU2BYIt5ruEYPjRy0EzbE3WszMgiaLINFrNI7vIW8YIt40JAxvcpGGWslc3Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
-          "title": "联邦学习、对比学习前沿方法学术沙龙预告",
-          "date": "2021年4月8号",
-          "url":"https://mp.weixin.qq.com/s/jp0cFxJoe4UuEQS5CBPeZA"
         },,
     {
           "img": "../../static/newhHome/avaters/man.png",
