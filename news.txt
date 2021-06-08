@@ -1,5 +1,4 @@
-{
-          "img": ".https://mmbiz.qpic.cn/mmbiz_jpg/Oweh1V0IUZ3Y2tet57iagvicy90sFhnqptwBvbQqJOXdcyjQmxSfD2Rr98rW6SicNa2vISXtljv5DfPYPAT7abflA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
+{       "img":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgrs.zju.edu.cn%2Fattachments%2Fzjugrs%2FUserFiles%2FImage%2Fnews%2F201003171.JPG&refer=http%3A%2F%2Fgrs.zju.edu.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625755407&t=675ca3b4bd6e64b6423c06632e364574",
           "title": "智慧交通赋能未来社区专题论坛成功举办",
           "date": "2021年5月22日",
           "content":"“智慧交通赋能未来社区”专题论坛在浙江大学国际联合学院（海宁国际校区）多功能厅顺利举行。此次论坛由浙江大学ZJUI、公共管理学院、国际联合商学院（ZIBS）、平衡建筑研究中心和智慧交通浙江省工程研究中心承办，并得到了浙江大学可计算数字交通虚拟实验室、未来交通实验室、计算社会科学研究中心、先进电气国际研究中心以及浙江省计算机学会的大力支持。",
