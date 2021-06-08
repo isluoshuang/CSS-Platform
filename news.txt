@@ -35,4 +35,4 @@
           "title": "欢迎参加AI+教育：K12数字化素养能力研讨会",
           "date": "2021年5月14日",
           "url":"https://mp.weixin.qq.com/s/TlemMM2cLg5pPVNfnMQbkw"
-        },,
+        }
