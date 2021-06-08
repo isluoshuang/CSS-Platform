@@ -13,7 +13,7 @@
           "url":"https://mp.weixin.qq.com/s/PI3OpycxUFj4DzOC4lpHxQ"
         },,
     {
-          "img": "https://i.loli.net/2021/06/08/WNxC478QnAIiyG9.png",
+          "img": "https://i.loli.net/2021/06/08/Qcjg6JwXNLUS8vu.jpg",
           "title": "“数据场景 智能应用”讲座预告",
           "date": "2021年1月4日",
           "url":"https://mp.weixin.qq.com/s/kB4QlZVAaUSwCfk_Dq1odA"
