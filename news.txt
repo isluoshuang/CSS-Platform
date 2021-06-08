@@ -1,5 +1,5 @@
 {       
-          "img":"https://sm.ms/image/JT6zfUZWkxVAMa5",
+          "img":"https://i.loli.net/2021/06/08/JT6zfUZWkxVAMa5.jpg",
           "title": "智慧交通赋能未来社区专题论坛成功举办",
           "date": "2021年5月22日",
           "content":"“智慧交通赋能未来社区”专题论坛在浙江大学国际联合学院（海宁国际校区）多功能厅顺利举行。此次论坛由浙江大学ZJUI、公共管理学院、国际联合商学院（ZIBS）、平衡建筑研究中心和智慧交通浙江省工程研究中心承办，并得到了浙江大学可计算数字交通虚拟实验室、未来交通实验室、计算社会科学研究中心、先进电气国际研究中心以及浙江省计算机学会的大力支持。",
@@ -7,31 +7,31 @@
     
         },,
    {
-          "img": "https://mmbiz.qpic.cn/mmbiz_png/rUkydbX1SCRlibxPUmlIVTbmo8OVvQxgVLsFiaP7JU2Y7YryUJXRlcYdFy7FicE0H0ev8dKpXFXXojwstZ8LPEN4w/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
+          "img": "https://i.loli.net/2021/06/08/WNxC478QnAIiyG9.png",
           "title": "浙江大学可计算数字交通虚拟实验室正式启动",
           "date": "2020年11月30日",
           "url":"https://mp.weixin.qq.com/s/PI3OpycxUFj4DzOC4lpHxQ"
         },,
     {
-          "img": "https://sm.ms/image/WNxC478QnAIiyG9",
+          "img": "https://i.loli.net/2021/06/08/WNxC478QnAIiyG9.png",
           "title": "“数据场景 智能应用”讲座预告",
           "date": "2021年1月4日",
           "url":"https://mp.weixin.qq.com/s/kB4QlZVAaUSwCfk_Dq1odA"
         },,
           {
-          "img": "https://sm.ms/image/QyS3lrBIN9tecEv",
+          "img": "https://i.loli.net/2021/06/08/bLRwfhOaYkBFe2Q.jpg",
           "title": "联邦学习、对比学习前沿方法学术沙龙预告",
           "date": "2021年4月8号",
           "url":"https://mp.weixin.qq.com/s/jp0cFxJoe4UuEQS5CBPeZA"
         },,
     {
-          "img": "https://sm.ms/image/cT28JxtdgvbomUh",
+          "img": "https://i.loli.net/2021/06/08/cT28JxtdgvbomUh.png",
           "title": "小样本元学习学术沙龙预告",
           "date": "2021年5月11日",
           "url":"https://mp.weixin.qq.com/s/vDDTCFkrC9WLkE9fobvjTg"
         },,
     {
-          "img": "https://sm.ms/image/qsPjDnopbthck6g",
+          "img": "https://i.loli.net/2021/06/08/qsPjDnopbthck6g.png",
           "title": "欢迎参加AI+教育：K12数字化素养能力研讨会",
           "date": "2021年5月14日",
           "url":"https://mp.weixin.qq.com/s/TlemMM2cLg5pPVNfnMQbkw"
