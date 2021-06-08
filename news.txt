@@ -1,5 +1,5 @@
 {       
-          "img":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4226576839,3231167578&fm=26&gp=0.jpg",
+          "img":"https://sm.ms/image/JT6zfUZWkxVAMa5",
           "title": "智慧交通赋能未来社区专题论坛成功举办",
           "date": "2021年5月22日",
           "content":"“智慧交通赋能未来社区”专题论坛在浙江大学国际联合学院（海宁国际校区）多功能厅顺利举行。此次论坛由浙江大学ZJUI、公共管理学院、国际联合商学院（ZIBS）、平衡建筑研究中心和智慧交通浙江省工程研究中心承办，并得到了浙江大学可计算数字交通虚拟实验室、未来交通实验室、计算社会科学研究中心、先进电气国际研究中心以及浙江省计算机学会的大力支持。",
@@ -13,25 +13,25 @@
           "url":"https://mp.weixin.qq.com/s/PI3OpycxUFj4DzOC4lpHxQ"
         },,
     {
-          "img": "https://mmbiz.qpic.cn/mmbiz_jpg/rUkydbX1SCR759Mh8GzPm9fuwraNX6cpYvJNgqibiaH5flzlQapwZlvVht9miaErCGMWXc0FiaQicDcx59tCEyLxQSQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
+          "img": "https://sm.ms/image/WNxC478QnAIiyG9",
           "title": "“数据场景 智能应用”讲座预告",
           "date": "2021年1月4日",
           "url":"https://mp.weixin.qq.com/s/kB4QlZVAaUSwCfk_Dq1odA"
         },,
           {
-          "img": "https://mmbiz.qpic.cn/mmbiz_png/rUkydbX1SCTVeaM88UWRiaeW482GBU2BYIt5ruEYPjRy0EzbE3WszMgiaLINFrNI7vIW8YIt40JAxvcpGGWslc3Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
+          "img": "https://sm.ms/image/QyS3lrBIN9tecEv",
           "title": "联邦学习、对比学习前沿方法学术沙龙预告",
           "date": "2021年4月8号",
           "url":"https://mp.weixin.qq.com/s/jp0cFxJoe4UuEQS5CBPeZA"
         },,
     {
-          "img": "https://mmbiz.qpic.cn/mmbiz_png/rUkydbX1SCRVFQY72RKVuqxKHfgvLibNpFCPV27sjA9tGKyGPLXdV4ibiczlv8flurtkY1OQ020peN7v7Yu7b46Vg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
+          "img": "https://sm.ms/image/cT28JxtdgvbomUh",
           "title": "小样本元学习学术沙龙预告",
           "date": "2021年5月11日",
           "url":"https://mp.weixin.qq.com/s/vDDTCFkrC9WLkE9fobvjTg"
         },,
     {
-          "img": "../../static/newhHome/avaters/man.png",
+          "img": "https://sm.ms/image/qsPjDnopbthck6g",
           "title": "欢迎参加AI+教育：K12数字化素养能力研讨会",
           "date": "2021年5月14日",
           "url":"https://mp.weixin.qq.com/s/TlemMM2cLg5pPVNfnMQbkw"
