@@ -10,6 +10,7 @@
   "dependencies": {
     "echarts": "^3.8.5",
     "element-ui": "^2.4.9",
+    "jquery": "^3.6.0",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
   },

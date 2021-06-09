@@ -1,133 +1,127 @@
 <template>
-  <div class="header">
-    <router-link to="/">
-      <img class="icon" src="../../../static/zjucss.png">
-    </router-link>
-    <router-link class="tab" to="/list"><span id="span1">自动问卷系统</span></router-link>
-    <router-link class="tab" to="/nlp"><span id="span2">自然语言处理</span></router-link>
-    <router-link class="tab" to="/computingService"><span id="span3">计算服务</span></router-link>
-    <a class="tab" href="../../../static/readme.html"><span id="span4">说明文档</span></a>
-    <router-link class="login" to="/login"><span id="span5">{{loginOrRegister}}</span></router-link>
+  <div class="header-container" id="header">
+    <ul class="titleStart">
+      <a>
+        <img
+          class="icon"
+          @click="goto('mainWarp')"
+          src="../../../static/zjucss.png"
+        />
+      </a>
+    </ul>
+    <ul class="titleEnd">
+      <li>
+        <a class="tab"
+          ><span id="span" @click="goto('introduce')">中心介绍</span></a
+        >
+      </li>
+      <li>
+        <a class="tab"
+          ><span id="span" @click="goto('scientificWarp')">科研领域</span></a
+        >
+      </li>
+      <li>
+        <a class="tab" to="/pubResources"
+          ><span id="span" @click="goto('pubResources')">公开资源</span></a
+        >
+      </li>
+      <li>
+        <a class="tab" to="/virLaboratory"
+          ><span id="span" @click="goto('virLaboratory')">虚拟实验室</span></a
+        >
+      </li>
+      <li>
+        <a class="tab" to="/team"
+          ><span id="span" @click="goto('team')">科研团队</span></a
+        >
+      </li>
+      <li>
+        <a class="tab" to="/result" @click="goto('result')"
+          ><span id="span">研究成果</span></a
+        >
+      </li>
+      <li>
+        <a class="tab" to="/newsTrends"
+          ><span id="span" @click="goto('newsTrends')">新闻动态</span></a
+        >
+      </li>
+      <li>
+        <a class="tab" to="/contact"
+          ><span id="span" @click="goto('contact')">联系方式</span></a
+        >
+      </li>
+    </ul>
   </div>
 </template>
-
 <script>
-  /**
-   * A module that define public header component
-   * @exports header
-   * @author oyh(Reusjs)
-   */
-  export default {
-    name: 'header',
-    data(){
-      return{
-      }
+export default {
+  components: {},
+  props: {},
+  data() {
+    return {};
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {},
+  methods: {
+    goto(location) {
+      this.$parent.sildeMethod(location);
     },
-    computed:{
-      loginOrRegister(){
-        if (sessionStorage.getItem('user') != null) {
-          return sessionStorage.getItem('user')
-        }
-        else{
-          let temp = "登陆/注册"
-          return temp
-        }
-      }
+    changeBackgroundTo() {
+      let headerWarp = document.getElementById("header");
+      headerWarp.style.backgroundColor = "#104e5b";
     },
-  // methods: {
-  //   itemClick(){
-  //     if (sessionStorage.getItem('user') != null) {
-  //       console.log(sessionStorage.getItem('user'))
-  //       this.loginOrRegister = sessionStorage.getItem('user');
-  //     }
-  //   }
-  // },
-  }
-
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?5f228c169bee6b288c0b4652cccda107";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
+    changeBackgroundBack() {
+      let headerWarp = document.getElementById("header");
+      headerWarp.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    },
+  },
+};
 </script>
 
-<style>
-.header{
-  width:100%;
-  height:72px;
-  background:rgba(255,255,255,1);
-  border:1px solid rgba(232,234,237,1);
-  position: relative;
-}
-#span1{
-  position: absolute;
-  top: 35%;
-  left: 22%;
-  color:rgba(36,41,46,1);
-}
-#span2{
-  position: absolute;
-  top: 35%;
-  left: 30%;
-  color:rgba(36,41,46,1);
-}
-#span3{
-  position: absolute;
-  top: 35%;
-  left: 38%;
-  color:rgba(36,41,46,1);
-}
-#span4{
-  position: absolute;
-  top: 35%;
-  left: 44%;
-  color:rgba(36,41,46,1);
-}
-#span5{
-  position: absolute;
-  top: 35%;
-  right: 12%;
-  color:rgba(36,41,46,1);
-}
-.tab{
-  display: inline-block;
-  margin: 10px;
-  font-size:14px;
-  font-family:PingFangSC-Medium,PingFang SC;
-  font-weight:500;
-  line-height:20px;
-}
-
-#span1:hover{
-  color:rgba(51,141,251,1);
-}
-#span2:hover{
-  color:rgba(51,141,251,1);
-}
-#span3:hover{
-  color:rgba(51,141,251,1);
-}
-#span4:hover{
-  color:rgba(51,141,251,1);
-}
-#span5:hover{
-  color:rgba(51,141,251,1);
-}
-.icon{
-  height: 28px;
-  width: 140px;
-  margin-left: 11%;
-  margin-top: 20px;
-}
-.login{
-  height:20px;
-  font-size:14px;
-  font-family:PingFangSC-Medium,PingFang SC;
-  font-weight:500;
-  color:rgba(36,41,46,1);
-  line-height:20px;
-  margin-left: 50%;
+<style lang="scss" scoped>
+// @import "../style/components";
+.header-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  min-width: 1170px;
+  height: 112px;
+  justify-content: space-between;
+  z-index: 100;
+  .titleStart {
+    .icon {
+      height: 34px;
+      width: 167px;
+      margin-left: 54px;
+      margin-top: 38px;
+    }
+  }
+  .titleEnd {
+    display: flex;
+    justify-content: space-evenly;
+    width: 882px;
+    margin-right: 257px;
+    padding-top: 47px;
+    li {
+      cursor: pointer;
+      display: inline-block;
+      height: 100%;
+      list-style: none;
+      .tab {
+        text-decoration: none;
+        #span {
+          width: 72px;
+          height: 25px;
+          font-size: 18px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: #ffffff;
+          line-height: 25px;
+        }
+      }
+    }
+  }
 }
 </style>

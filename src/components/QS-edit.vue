@@ -8,12 +8,12 @@
     ref="titleInput">
     <div class="content">
 <!--       <el-input style="width: 200px;margin-left: -50px; margin-bottom: 15px" v-model="qsItem.randomNum" :value="qsItem.randomNum" placeholder="请输入情景题数量" clearable></el-input> -->
-      <div class="questions" v-for="(qs, index) in qsItem.question">
+      <div class="questions" v-for="(qs, index) in qsItem.question" :key="index">
         <div class="qs-left">
           <p class="qs-title">
             {{qs.num}}&nbsp;{{qs.title}}&nbsp;{{getMsg(qs)}}
           </p>
-          <p v-for="option in qs.options" class="option" v-if="qs.type === 'radio' || qs.type === 'checkbox' || qs.type === 'scene'">
+          <p v-for="option in qs.options" class="option" v-if="qs.type === 'radio' || qs.type === 'checkbox' || qs.type === 'scene'" >
             <label style="margin-right: 8px">
               <input 
               type="radio" 

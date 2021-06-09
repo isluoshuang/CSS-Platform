@@ -74,11 +74,11 @@ var _hmt = _hmt || [];
     mounted() {
       let user = {}
       user["user"] = sessionStorage.getItem('user')
-      if (user["user"] == null) {
-        alert("请先进入登陆/注册页面");
-        this.$router.push({path: '/login'})
-      }
-      else{
+      // if (user["user"] == null) {
+      //   alert("请先进入登陆/注册页面");
+      //   this.$router.push({path: '/login'})
+      // }
+     // else{
         var that = this;
         // let change_num = [];
         $.ajax({  
@@ -115,7 +115,7 @@ var _hmt = _hmt || [];
                 alert("查询出现了错误！");  
             } 
         });         
-      }
+      //}
     },
     methods: {
       showDialogMsg(info) {

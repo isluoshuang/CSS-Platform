@@ -8,7 +8,6 @@ import Router from 'vue-router'
 // import qsData from '@/components/QS-data'
 // import qsFill from '@/components/QS-fill'
 // import qsEdit from '@/components/QS-edit'
-import qsMain from '@/components/QS-main'
 // import qsNlp from '@/components/QS-nlp'
 // import qsKeywordExtraction from '@/components/QS-keywordExtraction'
 // import qsDataService from '@/components/QS-dataService'
@@ -18,6 +17,8 @@ import qsMain from '@/components/QS-main'
 // import qsFreAnlysisPuc from '@/components/QS-freAnlysisPuc'
 // import qsGetSentiment from '@/components/QS-getSentiment'
 // import qsLogin from '@/components/QS-login'
+
+// import qsMain from '@/components/Q'
 
 const qsList = resolve => require(['../components/QS-list'], resolve)
 const qsData = resolve => require(['../components/QS-data'], resolve)
@@ -35,7 +36,16 @@ const qsGetSentiment = resolve => require(['../components/QS-getSentiment'], res
 const qsLogin = resolve => require(['../components/QS-login'], resolve)
 const qsDatabaseShow = resolve => require(['../components/QS-databaseShow'], resolve)
 const qsMicCompute = resolve => require(['../components/QS-micCompute'], resolve)
-
+const qscalculate = resolve => require(['../components//QS-calculateMain'], resolve)
+//暂时用不到
+// const scientificPage = resolve => require(['../views/scientific'], resolve)
+// const pubResourcesPage = resolve => require(['../views/pubResources'], resolve)
+// const virLaboratoryPage = resolve => require(['../views/virLaboratory'], resolve)
+// const teamPage = resolve => require(['../views/team'], resolve)
+// const resultPage = resolve => require(['../views/result'], resolve)
+// const newsTrendsPage = resolve => require(['../views/newsTrends'], resolve)
+// const contactPage = resolve => require(['../views/contact'], resolve)
+const longHomePage = resolve => require(['../views/longHome'], resolve)
 Vue.use(Router)
 
 export default new Router({
@@ -46,9 +56,19 @@ export default new Router({
       component: qsList
     },
     {
+      path: '/',
+      name: 'longHome',
+      component: longHomePage
+    },
+    {
       path: '/data/:num',
       name: 'qsData',
       component: qsData
+    },
+    {
+      path: '/calculate',
+      name: 'qscalculate',
+      component: qscalculate
     },
     {
       path: '/fill/:user/:num',
@@ -100,11 +120,11 @@ export default new Router({
       name: 'qsGetSentiment',
       component: qsGetSentiment
     },
-    {
-      path: '/',
-      name: 'qsMain',
-      component: qsMain
-    },
+    // {
+    //   path: '/',
+    //   name: 'qsMain',
+    //   component: qsMain
+    // },
     {
       path: '/login',
       name: 'qsLogin',
@@ -119,6 +139,41 @@ export default new Router({
       path: '/micCompute',
       name: 'qsMicCompute',
       component: qsMicCompute
-    }
+    },
+    // {
+    //   path: '/scientific',
+    //   name: 'scientific',
+    //   component: scientificPage
+    // },
+    // {
+    //   path: '/pubResources',
+    //   name: 'pubResources',
+    //   component: pubResourcesPage
+    // },
+    // {
+    //   path: '/virLaboratory',
+    //   name: 'virLaboratory',
+    //   component: virLaboratoryPage
+    // },
+    // {
+    //   path: '/team',
+    //   name: 'team',
+    //   component: teamPage
+    // },
+    // {
+    //   path: '/result',
+    //   name: 'result',
+    //   component: resultPage
+    // },
+    // {
+    //   path: '/newsTrends',
+    //   name: 'newsTrends',
+    //   component: newsTrendsPage
+    // },
+    // {
+    //   path: '/contact',
+    //   name: 'contact',
+    //   component: contactPage
+    // }
   ]
 })

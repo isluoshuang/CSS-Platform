@@ -141,7 +141,7 @@
 
     <el-row>
       <el-button type="primary" icon="el-icon-download">
-        <a :href="'/css/download/'+username +'/' + download_file+''" download={{download_file}} style="text-decoration:none"><span style="color: white">下载文件</span></a>
+        <a :href="'/css/download/'+username +'/' + download_file+''" download=download_file style="text-decoration:none"><span style="color: white">下载文件</span></a>
       </el-button>
     </el-row> 
   </div>
@@ -855,12 +855,12 @@ export default {
     width: 1000px;
     margin: 20px auto;
   } 
-  .el-button--primary.is-plain {
+  /* .el-button--primary.is-plain {
     width: 150px;
   }
   .el-button--primary {
       width: 150px;
-  }
+  } */
   .el-input--suffix .el-input__inner {
     margin-left: 60px;
   }
@@ -900,12 +900,12 @@ export default {
   .el-input--suffix .el-input__inner {
     margin-left: 0px;
   }
-  .el-input__inner {
+  /* .el-input__inner {
       width: 170px;
   }
   .el-button--primary, .el-button--primary.is-plain {
     width: 170px;
-  }
+  } */
   .el-dropdown-link {
     cursor: pointer;
     color: #409EFF;
