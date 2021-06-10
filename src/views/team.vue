@@ -3,59 +3,24 @@
     <div class="titleWarp">
       <div class="firstT">文案文案文案</div>
       <div class="TwoT">我们的团队</div>
+
       <div class="avaterone">
         <avatercom
-          Myavater="./static/newhHome/avaters/1.png"
-          Myname="吴超"
-          Mypost="中心主任"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/2.png"
-          Myname="王朝"
-          Mypost="助理研究员"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/3.png"
-          Myname="李皓"
-          Mypost="博士后"
+          v-for="(item, index) in list"
+          :key="index"
+          :Myavater="item.Myavater"
+          :Myname="item.Myname"
+          :Mypost="item.Mypost"
         />
       </div>
       <div class="btitle">博士研究生</div>
       <div class="avatertwo">
         <avatercom
-          Myavater="./static/newhHome/avaters/man.png"
-          Myname="唐作其"
-          Mypost="博士研究生 · 2018"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/第二行/2.png"
-          Myname="张凤达"
-          Mypost="博士研究生 · 2019"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/第二行/3.png"
-          Myname="沈弢"
-          Mypost="博士研究生 · 2019"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/第二行/4.png"
-          Myname="罗双"
-          Mypost="博士研究生 · 2019"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/第二行/5.png"
-          Myname="朱迪迪"
-          Mypost="博士研究生 · 2020"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/第二行/6.png"
-          Myname="陈莫"
-          Mypost="博士研究生 · 2020"
-        />
-        <avatercom
-          Myavater="./static/newhHome/avaters/man.png"
-          Myname="刘宇轩"
-          Mypost="博士研究生 · 2020"
+          v-for="(item, index) in listby"
+          :key="index"
+          :Myavater="item.Myavater"
+          :Myname="item.Myname"
+          :Mypost="item.Mypost"
         />
       </div>
       <div class="btitle">硕士研究生</div>
@@ -91,6 +56,60 @@ export default {
   props: {},
   data() {
     return {
+      list: [
+        {
+          Myavater: "./static/newhHome/avaters/1.png",
+          Myname: "吴超",
+          Mypost: "中心主任",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/2.png",
+          Myname: "王朝",
+          Mypost: "助理研究员",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/3.png",
+          Myname: "李皓",
+          Mypost: "博士后",
+        },
+      ],
+      listby: [
+        {
+          Myavater: "./static/newhHome/avaters/man.png",
+          Myname: "唐作其",
+          Mypost: "博士研究生 · 2018",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/第二行/2.png",
+          Myname: "张凤达",
+          Mypost: "博士研究生 · 2019",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/第二行/3.png",
+          Myname: "沈弢",
+          Mypost: "博士研究生 · 2019",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/第二行/4.png",
+          Myname: "罗双",
+          Mypost: "博士研究生 · 2019",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/第二行/5.png",
+          Myname: "朱迪迪",
+          Mypost: "博士研究生 · 2020",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/第二行/6.png",
+          Myname: "陈莫",
+          Mypost: "博士研究生 · 2020",
+        },
+        {
+          Myavater: "./static/newhHome/avaters/man.png",
+          Myname: "刘宇轩",
+          Mypost: "博士研究生 · 2020",
+        },
+      ],
       lists: [
         {
           Myavater: "./static/newhHome/avaters/man.png",
@@ -303,7 +322,7 @@ export default {
     margin: auto;
     // padding-left: 257px;
     .firstT {
-      pxmargin-bottom: 7px;
+      margin-bottom: 7px;
       width: 288px;
       height: 65px;
       font-size: 46px;

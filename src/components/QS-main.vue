@@ -28,16 +28,16 @@ export default {
 <style lang="scss" scoped>
 .QSMain-container {
   min-width: 1170px;
-  width: 100%;
-  height: 100%;
+
+  height: fit-content;
   background: no-repeat url("../../static/img/home_backgroud.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center 0;
+  padding-top: 334px;
+  padding-left: 257px;
+  padding-bottom: 306px;
   .welcome_title {
-    position: relative;
-    top: 334px;
-    margin-left: 261px;
     width: 88px;
     height: 30px;
     font-size: 22px;
@@ -47,9 +47,7 @@ export default {
     line-height: 30px;
   }
   .name_title {
-    position: relative;
-    top: 414px;
-    margin-left: 257px;
+   margin-top: 50px;
     width: 800px;
     height: 184px;
     font-size: 80px;
@@ -59,12 +57,10 @@ export default {
     line-height: 92px;
   }
   .input_email {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 478px;
-    left: 257px;
+    margin-top: 60px;
     width: 1000px;
     height: 120px;
     background: #ffffff;

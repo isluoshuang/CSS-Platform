@@ -36,6 +36,7 @@ export default {
   margin-right: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   border-radius: 3px;
+  margin-bottom: 20px;
   .name {
     position: absolute;
     left: 16px;

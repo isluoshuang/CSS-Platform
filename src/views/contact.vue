@@ -37,7 +37,8 @@ export default {
 <style lang="scss" scoped>
 .contact-container {
   position: relative;
-  min-width: 1560px;
+  // min-width: 1560px;
+  min-width: 1170px;
   width: 100%;
   height: 449px;
   background-color: #ffffff;

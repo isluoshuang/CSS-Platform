@@ -293,6 +293,7 @@ export default {
     .pic {
       width: 258px;
       height: 413px;
+      cursor: pointer;
       .img {
         width: 57px;
         height: 43px;

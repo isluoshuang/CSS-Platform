@@ -36,7 +36,8 @@ export default {
 
 <style lang="scss" scoped>
 .introduce-container {
-  min-width: 1405px;
+  // min-width: 1405px;
+  min-width: 1170px;
   width: 100%;
   height: fit-content;
   background-color: #ffffff;

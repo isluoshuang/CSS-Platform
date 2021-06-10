@@ -163,8 +163,8 @@ export default {
 .scientific-container {
   min-width: 1170px;
   width: 100%;
-  height: 100%;
   padding-top: 190px;
+  padding-bottom: 190px;
   background: #f5f9fa;
   .contentBox {
     padding-left: 255px;
