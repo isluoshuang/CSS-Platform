@@ -214,7 +214,7 @@ export default {
           Mypost: "2020届毕业生",
         },
         {
-          Myavater: "./static/newhHome/avaters/female.png",
+          Myavater: "./static/newhHome/avaters/第六行/3.png",
           Myname: "王丹妮",
           Mypost: "2020届毕业生",
         },
