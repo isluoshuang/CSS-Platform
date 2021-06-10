@@ -34,9 +34,9 @@ export default {
   data() {
     return {
       imglist:[
-        {url:"../../static/newhHome/one.png"},
-        {url:"../../static/newhHome/two.png"},
-        {url:"../../static/newhHome/introductory.jpg"}
+        {url:"../static/newhHome/one.png"},
+        {url:"../static/newhHome/two.png"},
+        {url:"../static/newhHome/introductory.jpg"}
       ]
     };
   },
