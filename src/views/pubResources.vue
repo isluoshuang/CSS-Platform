@@ -3,7 +3,7 @@
     <img class="xt1" src="../../static/newhHome/xt1.png" alt="" />
     <img class="xt2" src="../../static/newhHome/xt2.png" alt="" />
     <div class="titleWarp">
-      <div class="Twirter">特点文案</div>
+      <div class="Twirter">更快捷  更方便</div>
       <div class="Pus">公开资源</div>
     </div>
     <div class="peoCardWarp">
@@ -121,7 +121,7 @@ export default {
       font-size: 46px;
       font-family: PingFangSC-Ultralight, PingFang SC;
       font-weight: 200;
-      color: #ffffff;
+      color: #9ab0b5;
       line-height: 65px;
     }
     .Pus {

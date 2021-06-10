@@ -1,7 +1,7 @@
 <template>
   <div class="team-container">
     <div class="titleWarp">
-      <div class="firstT">文案文案文案</div>
+      <!-- <div class="firstT">文案文案文案</div> -->
       <div class="TwoT">我们的团队</div>
 
       <div class="avaterone">
@@ -324,7 +324,7 @@ export default {
     .firstT {
       margin-bottom: 7px;
       width: 288px;
-      height: 65px;
+      // height: 65px;
       font-size: 46px;
       font-family: PingFangSC-Ultralight, PingFang SC;
       font-weight: 200;
@@ -333,7 +333,7 @@ export default {
     }
     .TwoT {
       width: 293px;
-      height: 78px;
+      height: 124px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;

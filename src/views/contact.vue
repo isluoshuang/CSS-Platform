@@ -5,12 +5,11 @@
         <img class="img1" src="../../static/newhHome/定位.png" alt="" />
         <div class="addressTitle">地址</div>
         <div class="address">
-          浙江大学紫金港校区公共管理学院<br />
-          杭州市西湖区余杭塘路
+          浙江大学紫金港校区公共管理学院一楼 杭州市余杭塘路866号  
         </div>
         <img class="img2" src="../../static/newhHome/邮件.png" alt="" />
         <div class="emailTitle">邮箱</div>
-        <div class="email">svanur0202@gmail.com</div>
+        <div class="email">zjucss@zju.edu.cn</div>
         <img class="img3" src="../../static/newhHome/微信.png" alt="" />
         <div class="pubnumTitle">微信公众号</div>
         <img class="img4" src="../../static/newhHome/wechatpub.png" alt="" />
@@ -53,7 +52,7 @@ export default {
     border-radius: 4px;
     border: 1px solid #dddddd;
     left: 50%;
-   transform: translate(-50%);
+    transform: translate(-50%);
     bottom: 321px;
     .warp {
       position: relative;

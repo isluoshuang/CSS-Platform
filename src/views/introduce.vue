@@ -2,8 +2,8 @@
   <div class="introduce-container">
     <div class="title">
       <img src="../../static/newhHome/about.png" alt="" class="about" />
-      <span class="who">我们是谁</span>
-      <span class="characteristic">我们的特点</span>
+      <!-- <span class="who">我们是谁</span> -->
+      <span class="characteristic">中心介绍</span>
     </div>
     <div class="introduce_content">
       <div>
@@ -14,7 +14,15 @@
       </div>
     </div>
     <div class="pic_content">
-      <img  class="contentImg" src="../../static/newhHome/introductory.jpg" alt="">
+      <el-carousel height="779px">
+        <el-carousel-item v-for="item in imglist" :key="item">
+          <img
+            class="contentImg"
+            :src=item.url
+            alt=""
+          />
+        </el-carousel-item>
+      </el-carousel>
     </div>
   </div>
 </template>
@@ -24,7 +32,13 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      imglist:[
+        {url:"../../static/newhHome/one.png"},
+        {url:"../../static/newhHome/two.png"},
+        {url:"../../static/newhHome/introductory.jpg"}
+      ]
+    };
   },
   computed: {},
   watch: {},
@@ -35,42 +49,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
 .introduce-container {
   // min-width: 1405px;
   min-width: 1170px;
   width: 100%;
   height: fit-content;
   background-color: #ffffff;
+  padding-top: 112px;
   padding-bottom: 191px;
   .title {
     position: relative;
-    display: inline-block;
-    margin-top: 170px;
-    width: 1079px;
-    height: 338px;
+    // display: inline-block;
+    // margin-top: 170px;
+    // width: 1079px;
+    height: 278px;
     .about {
-      margin-left: 245px;
+      position: absolute;
+      // margin-left: 245px;
+      right: 0;
       width: 1079px;
       height: 201px;
       background: #fafbff #f5f9fa;
     }
-    .who {
-      position: absolute;
-      top: 109px;
-      left: 257px;
-      width: 192px;
-      height: 65px;
-      font-size: 46px;
-      font-family: PingFangSC-Ultralight, PingFang SC;
-      font-weight: 200;
-      color: #333333;
-      line-height: 65px;
-    }
+    // .who {
+    //   position: absolute;
+    //   top: 109px;
+    //   left: 257px;
+    //   width: 192px;
+    //   height: 65px;
+    //   font-size: 46px;
+    //   font-family: PingFangSC-Ultralight, PingFang SC;
+    //   font-weight: 200;
+    //   color: #333333;
+    //   line-height: 65px;
+    // }
     .characteristic {
       position: absolute;
-      top: 181px;
+      top: 120px;
+      width: 234px;
       left: 257px;
-      width: 293px;
       height: 78px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
@@ -97,9 +121,26 @@ export default {
     width: 1405px;
     height: 779px;
   }
-  .contentImg{
+  .contentImg {
     width: 100%;
     height: 100%;
   }
+
+  // 未选中状态
+  ::v-deep .el-carousel__indicator .el-carousel__button {
+    background: #959595;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+  }
+
+  // 选中状态
+  ::v-deep .el-carousel__indicator.is-active .el-carousel__button {
+    background: white;
+  }
+  // ::v-deep .el-carousel__container {
+  //   width: 1405px;
+  //   height: 779px;
+  // }
 }
 </style>

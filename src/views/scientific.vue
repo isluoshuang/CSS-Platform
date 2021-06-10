@@ -1,8 +1,8 @@
 <template>
   <div class="scientific-container">
     <div class="contentBox">
-      <div class="territory">科研领域</div>
-      <div class="characteristic">领域特点文案</div>
+      <!-- <div class="territory">科研领域</div> -->
+      <div class="characteristic">科研领域</div>
     </div>
     <div class="cardContent">
       <div class="card" @click="dialogVisible1 = true">
@@ -169,18 +169,18 @@ export default {
   .contentBox {
     padding-left: 255px;
     // position: relative;
-    .territory {
-      width: 384px;
-      height: 65px;
-      font-size: 46px;
-      font-family: PingFangSC-Ultralight, PingFang SC;
-      font-weight: 200;
-      color: #333333;
-      line-height: 65px;
-    }
+    // .territory {
+    //   width: 384px;
+    //   height: 65px;
+    //   font-size: 46px;
+    //   font-family: PingFangSC-Ultralight, PingFang SC;
+    //   font-weight: 200;
+    //   color: #333333;
+    //   line-height: 65px;
+    // }
     .characteristic {
       width: 468px;
-      height: 78px;
+      height: 143px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;

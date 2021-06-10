@@ -1,14 +1,16 @@
 <template>
   <div class="virLaboratory-container">
     <img class="logoone" src="../../static//newhHome/zjucss.png" alt="" />
-    <div class="titleWarp">
-      <div class="title1">更全面 更高效</div>
-      <div class="title2">虚拟实验室</div>
-    </div>
     <div class="contentFirst">
-      为促进计算社会科学领域的资源共享和技术成果互动，中心采用虚拟实验室机制对外开放软硬件设施、数据资源以及建模分析能力。
-      每个虚拟实验室对应一个具体研究方向或项目课题，由项目负责人将其人员和经费引入此虚拟实验室，而平台为虚拟实验室提供软硬件设施、数据资源、以及建模分析能力。
-      第一批虚拟实验室将包括智慧交通、数字经济、智慧医疗这三个课题，目前“可计算数字交通虚拟实验室”已与2020年11月正式启动。
+      <div class="titleWarp">
+        <!-- <div class="title1">更全面 更高效</div> -->
+        <div class="title2">虚拟实验室</div>
+      </div>
+      <div>
+        为促进计算社会科学领域的资源共享和技术成果互动，中心采用虚拟实验室机制对外开放软硬件设施、数据资源以及建模分析能力。
+        每个虚拟实验室对应一个具体研究方向或项目课题，由项目负责人将其人员和经费引入此虚拟实验室，而平台为虚拟实验室提供软硬件设施、数据资源、以及建模分析能力。
+        第一批虚拟实验室将包括智慧交通、数字经济、智慧医疗这三个课题，目前“可计算数字交通虚拟实验室”已与2020年11月正式启动。
+      </div>
     </div>
     <div class="contentTwo">可计算数字交通虚拟实验室</div>
     <div class="classcontentThree">
@@ -162,19 +164,21 @@
         <div class="content">
           随着时代的发展，世界城市规模不断扩大，各大城市的交通需求陡然增加，而地面出行所带来的堵塞和环保问题导致政府部门把目光转向地下交通发展，其中地铁是地下交通发展中最重要的交通工具。准确划定地铁站点吸引范围，分析影响地铁站点吸引范围主要因素，不仅对于优化地铁交通服务和规划地铁周边建成环境具有重要意义，同时对于新建地铁站点设施规划具有参考价值。传统的地铁吸引范围划定方法大多依赖于居民日常出行活动的调查和经验意见，存在时间周期长且耗费巨大和吸引范围划定不准确的问题；而多源城市数据的涌现为量化地铁站点周边建成环境及客流空间分布、合理划定地铁站点提供了全新的解决方案。TOD（Transit
           Oriented
-          Development，TOD）是高密度城市寻求的城市和交通和谐发展的重要选择，也是未来交通建设的主要参考理念。TOD旨在通过调整城市设计和规划政策，管理城市增长，将土地使用与平衡交通相结合，以减少对汽车的依赖，振兴衰落的中心和郊区。<br/>
-          我们承秉TOD开发模式，为杭州市轨道三期沿线规划提出适宜的发展方向与布局，实现地下空间利用最大化、交通一体化。<br/>
-          （1）提出了宏观、中观、微观三个层面的杭州市TOD发展框架。<br/>
-          （2）从TOD开发视角出发，利用杭州市的手机信令、网约出行、兴趣点、道路网络、公共交通线路等多源城市数据刻画杭州地铁站点周围的TOD信息指标，利用Ｋ均值聚类进行地铁站点聚类，结合TOD指标的空间变化趋势，确定杭州市不同类型地铁站点的吸引范围。<br/>
+          Development，TOD）是高密度城市寻求的城市和交通和谐发展的重要选择，也是未来交通建设的主要参考理念。TOD旨在通过调整城市设计和规划政策，管理城市增长，将土地使用与平衡交通相结合，以减少对汽车的依赖，振兴衰落的中心和郊区。<br />
+          我们承秉TOD开发模式，为杭州市轨道三期沿线规划提出适宜的发展方向与布局，实现地下空间利用最大化、交通一体化。<br />
+          （1）提出了宏观、中观、微观三个层面的杭州市TOD发展框架。<br />
+          （2）从TOD开发视角出发，利用杭州市的手机信令、网约出行、兴趣点、道路网络、公共交通线路等多源城市数据刻画杭州地铁站点周围的TOD信息指标，利用Ｋ均值聚类进行地铁站点聚类，结合TOD指标的空间变化趋势，确定杭州市不同类型地铁站点的吸引范围。<br />
           （3）对杭州市多个重点发展区域（未来科技城、西湖中心、萧山城区、临平新城、大江东产业区等）提出明确的TOD发展目标和策略。
         </div>
         <div class="imags">
           <div class="imagt">
-            <img style="width:534px"
+            <img
+              style="width: 534px"
               src="../../static/newhHome/基于智慧城市的杭州TOD模式研究.png"
               alt=""
-            /> 
-            <img style="width:462px"
+            />
+            <img
+              style="width: 462px"
               src="../../static/newhHome/基于智慧城市的杭州TOD模式研究2.png"
               alt=""
             />
@@ -223,19 +227,19 @@ export default {
     height: 229px;
   }
   .titleWarp {
-    padding-left: 257px;
+    // padding-left: 257px;
     margin-bottom: 80px;
-    .title1 {
-      height: 65px;
-      font-size: 46px;
-      font-family: PingFangSC-Ultralight, PingFang SC;
-      font-weight: 200;
-      color: #333333;
-      line-height: 65px;
-    }
+    // .title1 {
+    //   height: 65px;
+    //   font-size: 46px;
+    //   font-family: PingFangSC-Ultralight, PingFang SC;
+    //   font-weight: 200;
+    //   color: #333333;
+    //   line-height: 65px;
+    // }
     .title2 {
       width: 293px;
-      height: 78px;
+      height: 124px;
       margin-top: 7px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
@@ -257,7 +261,8 @@ export default {
   .contentTwo {
     width: 1406px;
     margin: auto;
-    margin-top: 34px;
+    // margin-top: 34px;
+    margin-top: 186px;
     margin-bottom: 30px;
     height: 50px;
     font-size: 36px;

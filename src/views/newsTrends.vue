@@ -1,7 +1,7 @@
 <template>
   <div class="newsTrends-container">
     <div class="titleWarp">
-      <div class="title1">更全面 更高效</div>
+      <!-- <div class="title1">更全面 更高效</div> -->
       <div class="title2">ZJUCSS新闻动态</div>
     </div>
     <div class="newWarp">
@@ -93,16 +93,16 @@ export default {
   overflow: hidden;
   .titleWarp {
     margin-bottom: 80px;
-    .title1 {
-      height: 65px;
-      font-size: 46px;
-      font-family: PingFangSC-Ultralight, PingFang SC;
-      font-weight: 200;
-      color: #333333;
-      line-height: 65px;
-    }
+    // .title1 {
+    //   height: 65px;
+    //   font-size: 46px;
+    //   font-family: PingFangSC-Ultralight, PingFang SC;
+    //   font-weight: 200;
+    //   color: #333333;
+    //   line-height: 65px;
+    // }
     .title2 {
-      height: 78px;
+      height: 124px;
       margin-top: 7px;
       margin-bottom: 80px;
       font-size: 56px;

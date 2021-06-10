@@ -1,7 +1,7 @@
 <template>
   <div class="result-container">
     <div class="titleWarp">
-      <div class="titleFrist">文案文案的</div>
+      <!-- <div class="titleFrist">文案文案的</div> -->
       <div class="titleTwo">研究成果</div>
     </div>
     <div class="resultList">
@@ -567,18 +567,18 @@ export default {
   background-color: #fff;
   .titleWarp {
     padding-left: 256px;
-    .titleFrist {
-      width: 336px;
-      height: 65px;
-      font-size: 46px;
-      font-family: PingFangSC-Ultralight, PingFang SC;
-      font-weight: 200;
-      color: #333333;
-      line-height: 65px;
-    }
+    // .titleFrist {
+    //   width: 336px;
+    //   height: 65px;
+    //   font-size: 46px;
+    //   font-family: PingFangSC-Ultralight, PingFang SC;
+    //   font-weight: 200;
+    //   color: #333333;
+    //   line-height: 65px;
+    // }
     .titleTwo {
       width: 234px;
-      height: 78px;
+      height: 124px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;
