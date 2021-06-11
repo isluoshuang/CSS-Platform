@@ -5,26 +5,23 @@
       <div class="title2">ZJUCSS新闻动态</div>
     </div>
     <div class="newWarp">
-      <div
-        class="leftNew"
-        @click="toOpenUrl(leftNews.url)"
-      >
-        <img class="bigImg" :src=leftNews.img />
+      <div class="leftNew"
+           @click="toOpenUrl(leftNews.url)">
+        <img class="bigImg"
+             :src=leftNews.img />
         <div class="leftDate">{{leftNews.date}}</div>
         <div class="leftTitle">{{leftNews.title}}</div>
         <div class="leftContent">
-        {{leftNews.content}}
+          {{leftNews.content}}
         </div>
       </div>
       <div class="rightNews">
-        <RightNewsCom
-          v-for="(item, index) in rightNews"
-          :key="index"
-          :img="item.img"
-          :title="item.title"
-          :date="item.date"
-          :url="item.url"
-        />
+        <RightNewsCom v-for="(item, index) in rightNews"
+                      :key="index"
+                      :img="item.img"
+                      :title="item.title"
+                      :date="item.date"
+                      :url="item.url" />
       </div>
     </div>
   </div>
@@ -37,7 +34,7 @@ export default {
     RightNewsCom,
   },
   props: {},
-  data() {
+  data () {
     return {
       rightNews: [],
       leftNews: {},
@@ -45,15 +42,15 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {
+  created () {
     this.initNews();
   },
-  mounted() {},
+  mounted () { },
   methods: {
-    toOpenUrl(url) {
+    toOpenUrl (url) {
       window.open(url);
     },
-    initNews() {
+    initNews () {
       let this_ = this;
       $.ajax({
         type: "get", //type可以为post也可以为get
@@ -74,7 +71,7 @@ export default {
             }
           });
         },
-        error: function (value) {},
+        error: function (value) { },
       });
     },
   },
@@ -116,7 +113,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    width: 1399px;
+    width: 1405px;
     height: 759px;
     .leftNew {
       display: flex;
@@ -142,12 +139,15 @@ export default {
       }
       .leftTitle {
         height: 58px;
-        font-size: 32px;
+        font-size: 50px;
         font-family: PingFangSC-Regular, PingFang SC;
         font-weight: 400;
         color: #333333;
         line-height: 59px;
-        margin-bottom: 9px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-bottom: 22px;
       }
       .leftContent {
         width: 822px;

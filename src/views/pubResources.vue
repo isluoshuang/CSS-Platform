@@ -1,15 +1,22 @@
 <template>
   <div class="pubResources-container">
-    <img class="xt1" src="../../static/newhHome/xt1.png" alt="" />
-    <img class="xt2" src="../../static/newhHome/xt2.png" alt="" />
-    <div class="titleWarp">
-      <div class="Twirter">更快捷  更方便</div>
-      <div class="Pus">公开资源</div>
-    </div>
+    <img class="xt1"
+         src="../../static/newhHome/xt1.png"
+         alt="" />
+    <img class="xt2"
+         src="../../static/newhHome/xt2.png"
+         alt="" />
+
     <div class="peoCardWarp">
-      <div class="pcard" @click="toOpenUrl(' http://10.72.100.6:82/')">
+      <div class="titleWarp">
+        <!-- <div class="Twirter">更快捷  更方便</div> -->
+        <div class="Pus">公开资源</div>
+      </div>
+      <div class="pcard"
+           @click="toOpenUrl(' http://10.72.100.6:82/')">
         <div class="avater">
-          <img src="../../static/newhHome/pub1.png" alt="" />
+          <img src="../../static/newhHome/pub1.png"
+               alt="" />
         </div>
         <div class="content">
           <div class="title">数据驱动建模案例库</div>
@@ -18,9 +25,11 @@
           </div>
         </div>
       </div>
-      <div class="pcard" @click="toOpenUrl('https://mo.zju.edu.cn/')">
+      <div class="pcard"
+           @click="toOpenUrl('https://mo.zju.edu.cn/')">
         <div class="avater">
-          <img src="../../static/newhHome/pub2.png" alt="" />
+          <img src="../../static/newhHome/pub2.png"
+               alt="" />
         </div>
         <div class="content">
           <div class="title">人工智能建模MO平台</div>
@@ -29,12 +38,11 @@
           </div>
         </div>
       </div>
-      <div
-        class="pcard"
-        @click="toOpenUrl('https://mo.zju.edu.cn/dataset?&p=1')"
-      >
+      <div class="pcard"
+           @click="toOpenUrl('https://mo.zju.edu.cn/dataset?&p=1')">
         <div class="avater">
-          <img src="../../static/newhHome/pub3.png" alt="" />
+          <img src="../../static/newhHome/pub3.png"
+               alt="" />
         </div>
         <div class="content">
           <div class="title">公开数据集MO</div>
@@ -43,10 +51,12 @@
           </div>
         </div>
       </div>
-      <router-link target="_blank" to="/calculate">
+      <router-link target="_blank"
+                   to="/calculate">
         <div class="pcard">
           <div class="avater">
-            <img src="../../static/newhHome/pub4.png" alt="" />
+            <img src="../../static/newhHome/pub4.png"
+                 alt="" />
           </div>
           <div class="content">
             <div class="title">在线服务</div>
@@ -58,9 +68,11 @@
           </div>
         </div>
       </router-link>
-      <div class="pcard" @click="toOpenUrl('http://10.72.100.5:8020/')">
+      <div class="pcard"
+           @click="toOpenUrl('http://10.72.100.5:8020/')">
         <div class="avater">
-          <img src="../../static/newhHome/pub5.png" alt="" />
+          <img src="../../static/newhHome/pub5.png"
+               alt="" />
         </div>
         <div class="content">
           <div class="title">资源申请</div>
@@ -78,15 +90,15 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {};
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {
-    toOpenUrl(url) {
+    toOpenUrl (url) {
       window.open(url);
     },
   },
@@ -114,19 +126,19 @@ export default {
   }
   .titleWarp {
     margin-bottom: 91px;
-    padding-left: 256px;
-    .Twirter {
-      width: 384px;
-      height: 65px;
-      font-size: 46px;
-      font-family: PingFangSC-Ultralight, PingFang SC;
-      font-weight: 200;
-      color: #9ab0b5;
-      line-height: 65px;
-    }
+    // padding-left: 256px;
+    // .Twirter {
+    //   width: 384px;
+    //   height: 65px;
+    //   font-size: 46px;
+    //   font-family: PingFangSC-Ultralight, PingFang SC;
+    //   font-weight: 200;
+    //   color: #9ab0b5;
+    //   line-height: 65px;
+    // }
     .Pus {
-      width: 468px;
-      height: 78px;
+      width: 1405px;
+      height: 124px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;

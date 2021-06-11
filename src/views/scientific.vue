@@ -1,51 +1,70 @@
 <template>
   <div class="scientific-container">
-    <div class="contentBox">
-      <!-- <div class="territory">科研领域</div> -->
-      <div class="characteristic">科研领域</div>
-    </div>
-    <div class="cardContent">
-      <div class="card" @click="dialogVisible1 = true">
-        <div class="icon">
-          <img class="img" src="../../static/newhHome/price.svg" alt="" />
-        </div>
-        <div class="introduction">分布式人工智能</div>
-        <div class="contentMore">
-          人工智能和大数据技术推动了数字经济的高速发展，然而传统的集中式…
-        </div>
+
+    <div class="warp">
+      <div class="contentBox">
+        <!-- <div class="territory">科研领域</div> -->
+        <div class="characteristic">科研领域</div>
       </div>
-      <div class="card" @click="dialogVisible2 = true">
-        <div class="icon icon1">
-          <img class="img" src="../../static/newhHome/package.svg" alt="" />
+      <div class="cardContent">
+        <div class="card"
+             @click="dialogVisible1 = true">
+          <div class="icon">
+            <img class="img"
+                 src="../../static/newhHome/price.svg"
+                 alt="" />
+          </div>
+          <div class="introduction">分布式人工智能</div>
+          <div class="contentMore">
+            人工智能和大数据技术推动了数字经济的高速发展，然而传统的集中式…
+          </div>
         </div>
-        <div class="introduction">数字社会治理</div>
-        <div class="contentMore">
-          为了更好地破除传统社会治理的复杂性、碎片化与模糊化，中心借助数…
+        <div class="card"
+             @click="dialogVisible2 = true">
+          <div class="icon icon1">
+            <img class="img"
+                 src="../../static/newhHome/package.svg"
+                 alt="" />
+          </div>
+          <div class="introduction">数字社会治理</div>
+          <div class="contentMore">
+            为了更好地破除传统社会治理的复杂性、碎片化与模糊化，中心借助数…
+          </div>
         </div>
-      </div>
-      <div class="card" @click="dialogVisible3 = true">
-        <div class="icon icon2">
-          <img class="img" src="../../static/newhHome/service.svg" alt="" />
+        <div class="card"
+             @click="dialogVisible3 = true">
+          <div class="icon icon2">
+            <img class="img"
+                 src="../../static/newhHome/service.svg"
+                 alt="" />
+          </div>
+          <div class="introduction">数字政府建设</div>
+          <div class="contentMore">
+            加快数字政府建设是“推进国家治理体系和治理能力现代化”的一项重大举措…
+          </div>
         </div>
-        <div class="introduction">数字政府建设</div>
-        <div class="contentMore">
-          加快数字政府建设是“推进国家治理体系和治理能力现代化”的一项重大举措…
-        </div>
-      </div>
-      <div class="card" @click="dialogVisible4 = true">
-        <div class="icon icon3">
-          <img class="img" src="../../static/newhHome/insurance.svg" alt="" />
-        </div>
-        <div class="introduction">智慧城市</div>
-        <div class="contentMore">
-          智慧城市治理的核心是“以人为本”。中心致力于将城市治理与物联网、云…
+        <div class="card"
+             @click="dialogVisible4 = true">
+          <div class="icon icon3">
+            <img class="img"
+                 src="../../static/newhHome/insurance.svg"
+                 alt="" />
+          </div>
+          <div class="introduction">智慧城市</div>
+          <div class="contentMore">
+            智慧城市治理的核心是“以人为本”。中心致力于将城市治理与物联网、云…
+          </div>
         </div>
       </div>
     </div>
 
     <div class="dialogSty">
-      <el-dialog width="1200px" top="110px" :visible.sync="dialogVisible1">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="110px"
+                 :visible.sync="dialogVisible1">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">分布式人工智能</div>
 
         <div class="content">
@@ -63,22 +82,29 @@
         </div>
         <div class="imags">
           <div class="imag">
-            <img src="../../static/newhHome/分布式人工智能.png" alt="" />
+            <img src="../../static/newhHome/分布式人工智能.png"
+                 alt="" />
             <span>Pay-by-data</span>
           </div>
           <div class="imag">
-            <img src="../../static/newhHome/分布式人工智能2.png" alt="" />
+            <img src="../../static/newhHome/分布式人工智能2.png"
+                 alt="" />
             <span>GFL</span>
           </div>
           <div class="imag">
-            <img src="../../static/newhHome/分布式人工智能3.png" alt="" />
+            <img src="../../static/newhHome/分布式人工智能3.png"
+                 alt="" />
             <span>FURL</span>
           </div>
         </div>
       </el-dialog>
 
-      <el-dialog width="1200px" top="110px" :visible.sync="dialogVisible2">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="110px"
+                 :visible.sync="dialogVisible2">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">数字社会治理</div>
 
         <div class="content">
@@ -97,8 +123,12 @@
         </div>
       </el-dialog>
 
-      <el-dialog width="1200px" top="150px" :visible.sync="dialogVisible3">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="150px"
+                 :visible.sync="dialogVisible3">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">数字政府建设</div>
 
         <div class="content">
@@ -111,16 +141,20 @@
           Review、《治理研究》等中英文期刊发表专业论文，提出了“整体智治”的现代政府治理新形态，被认为是基于中国经验推动公共管理普遍理论进步的重要成果。
           基于理论研究的既有贡献，本方向也实质性参与、推动了“互联网+政务服务”和数字政府建设的实践进展，相关政策报告得到国家领导人或省部级领导人肯定性批示逾10项。<br />
         </div>
-       
+
       </el-dialog>
 
-      <el-dialog width="1200px" top="110px" :visible.sync="dialogVisible4">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="110px"
+                 :visible.sync="dialogVisible4">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">智慧城市</div>
 
         <div class="content">
           智慧城市治理的核心是“以人为本”。中心致力于将城市治理与物联网、云计算、大数据、AI及区块链技术紧密结合，以每一个个体的“人”为基本研究单元，建立一个自下而上的城市治理研究范式。通过对人的所有行为的聚合，挖掘宏观规律，实现系统感知、实时获取、精准挖掘、快速响应的研究路径。从而提升城市资源运用的效率，优化城市管理和服务，改善市民的生活质量。<br />
-         <br/>
+          <br />
           <b>代表性工作</b><br />
 
           1.智慧交通<br />
@@ -133,7 +167,7 @@
           1 (2020):2）。利用EEG和fMRI脑信号+深度网络算法实现对用户情绪和满意度的准确测度（Front.
           Neurosci., 2018, 12,76）；与省医保、网新恩普等合作，提出了基于机器学习的“医保诈骗监测”和“异常处方检测”（Int.J. Environ. Res. Public Health 2020, 17(19),7265）；提出了一种基于机器学习的老年人失能风险预测方法（Archives ofGerontology and Geriatrics (2020): 104121）。
         </div>
-    
+
       </el-dialog>
     </div>
   </div>
@@ -143,7 +177,7 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       dialogVisible1: false,
       dialogVisible2: false,
@@ -153,8 +187,8 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {},
 };
 </script>
@@ -166,82 +200,88 @@ export default {
   padding-top: 190px;
   padding-bottom: 190px;
   background: #f5f9fa;
-  .contentBox {
-    padding-left: 255px;
-    // position: relative;
-    // .territory {
-    //   width: 384px;
-    //   height: 65px;
-    //   font-size: 46px;
-    //   font-family: PingFangSC-Ultralight, PingFang SC;
-    //   font-weight: 200;
-    //   color: #333333;
-    //   line-height: 65px;
-    // }
-    .characteristic {
-      width: 468px;
-      height: 143px;
-      font-size: 56px;
-      font-family: PingFangSC-Semibold, PingFang SC;
-      font-weight: 600;
-      color: #333333;
-      line-height: 78px;
-    }
-  }
-  .cardContent {
-    display: flex;
-    justify-content: space-between;
+  .warp {
     width: 1405px;
     margin: 0 auto;
-    height: 364px;
-    margin-top: 68px;
-    .card {
-      width: 291px;
-      height: 364px;
-      border-radius: 14px;
-      padding-left: 28px;
-      .icon {
-        display: inline-block;
-        margin-top: 38px;
-        width: 76px;
-        height: 76px;
-        border-radius: 17px;
-        .img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .introduction {
-        width: 172px;
-        height: 33px;
-        font-size: 24px;
-        margin-top: 38px;
-        margin-bottom: 28px;
+    .contentBox {
+      // padding-left: 255px;
+      // position: relative;
+      // .territory {
+      //   width: 384px;
+      //   height: 65px;
+      //   font-size: 46px;
+      //   font-family: PingFangSC-Ultralight, PingFang SC;
+      //   font-weight: 200;
+      //   color: #333333;
+      //   line-height: 65px;
+      // }
+      .characteristic {
+        width: 1405px;
+        height: 143px;
+        font-size: 56px;
         font-family: PingFangSC-Semibold, PingFang SC;
         font-weight: 600;
-        color: #100551;
-        line-height: 33px;
-      }
-      .contentMore {
-        width: 262px;
-        height: 100px;
-        font-size: 20px;
-        font-family: PingFangSC-Regular, PingFang SC;
-        font-weight: 400;
-        color: #7f8e9d;
-        line-height: 33px;
+        color: #333333;
+        line-height: 78px;
+        // margin-left: 28px;
+        margin-bottom: 68px;
       }
     }
-    .card:hover {
-      cursor: pointer;
-    }
-    .card:hover {
-      // transform: scale(1.2);
-      transition: all 1s ease 0s;
-      background-color: #fff;
-      box-shadow: 19px 42px 83px 0px #f2f2f3;
-      border-radius: 14px;
+    .cardContent {
+      display: flex;
+      justify-content: space-between;
+      width: 1405px;
+      margin: 0 auto;
+      // height: 364px;
+      // margin-top: 68px;
+      .card {
+        width: 291px;
+        height: 364px;
+        border-radius: 14px;
+        padding-left: 28px;
+        .icon {
+          display: inline-block;
+          margin-top: 38px;
+          width: 76px;
+          height: 76px;
+          border-radius: 17px;
+          .img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .introduction {
+          width: 172px;
+          height: 33px;
+          font-size: 24px;
+          margin-top: 38px;
+          margin-bottom: 28px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: #100551;
+          line-height: 33px;
+        }
+        .contentMore {
+          width: 262px;
+          height: 100px;
+          font-size: 20px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #7f8e9d;
+          line-height: 33px;
+        }
+      }
+      .card:hover {
+        cursor: pointer;
+      }
+      .card:hover {
+        // transform: scale(1.2);
+        transition: all 1s ease 0s;
+        background-color: #fff;
+        box-shadow: 19px 42px 83px 0px #f2f2f3;
+        border-radius: 14px;
+      }
     }
   }
 }

@@ -1,6 +1,9 @@
 <template>
-  <div class="rightNew"  @click="toOpenUrl(url)">
-    <img class="rightImg" :src="img" alt="" />
+  <div class="rightNew"
+       @click="toOpenUrl(url)">
+    <img class="rightImg"
+         :src="img"
+         alt="" />
     <div class="TitCon">
       <div class="title">{{ title }}</div>
       <div class="content">{{ date }}</div>
@@ -17,17 +20,17 @@ export default {
     date: String,
     url: String,
   },
-  data() {
+  data () {
     return {};
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {
+  created () { },
+  mounted () {
     console.log(this.Myavater);
   },
   methods: {
-    toOpenUrl(url) {
+    toOpenUrl (url) {
       window.open(url);
     },
   },
@@ -53,19 +56,24 @@ export default {
     flex-direction: column;
     width: 265px;
     .title {
-      //   height: 39px;
-      font-size: 20px;
+      width: 265px;
+      height: 39px;
+      font-size: 30px;
       font-family: PingFangSC-Regular, PingFang SC;
       font-weight: 400;
       color: #333333;
       line-height: 39px;
       margin-bottom: 11px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     .content {
+      width: 173px;
       height: 29px;
       font-size: 20px;
       font-family: Helvetica;
-      color: #333333;
+      color: #a3a3a3;
       line-height: 29px;
     }
   }

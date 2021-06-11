@@ -1,10 +1,11 @@
 <template>
   <div class="result-container">
-    <div class="titleWarp">
-      <!-- <div class="titleFrist">文案文案的</div> -->
-      <div class="titleTwo">研究成果</div>
-    </div>
+
     <div class="resultList">
+      <div class="titleWarp">
+        <!-- <div class="titleFrist">文案文案的</div> -->
+        <div class="titleTwo">研究成果</div>
+      </div>
       <div class="year2021">
         <div class="year">2021</div>
         <div class="resultContent">
@@ -31,7 +32,8 @@
           </div>
           <div class="content3">Design Science</div>
 
-          <div class="content1" style="width: 1165px">
+          <div class="content1"
+               style="width: 1165px">
             Machine learning techniques to predict reactionary delays and other
             associated key performance indicators on British <br />
             railway network
@@ -455,9 +457,11 @@
           </div>
         </div>
       </div>
-      <div class="years" style="height: 520px">
+      <div class="years"
+           style="height: 520px">
         <div class="year">2017</div>
-        <div class="resultContent" style="height: 374px">
+        <div class="resultContent"
+             style="height: 374px">
           <div>
             <div class="content1">
               DeepSleepNet: A Model for Automatic Sleep Stage Scoring Based on
@@ -516,7 +520,7 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       show: false,
       first: true,
@@ -524,12 +528,12 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {
+  created () { },
+  mounted () {
     this.initHeight();
   },
   methods: {
-    initHeight() {
+    initHeight () {
       if (this.show == true) {
         let Rwarp = document.getElementById("result");
         console.log(Rwarp);
@@ -547,7 +551,7 @@ export default {
         Rwarp.style.overflow = "visible";
       }
     },
-    changeShow() {
+    changeShow () {
       this.show = !this.show;
       this.initHeight();
     },
@@ -566,16 +570,7 @@ export default {
   padding-bottom: 190px;
   background-color: #fff;
   .titleWarp {
-    padding-left: 256px;
-    // .titleFrist {
-    //   width: 336px;
-    //   height: 65px;
-    //   font-size: 46px;
-    //   font-family: PingFangSC-Ultralight, PingFang SC;
-    //   font-weight: 200;
-    //   color: #333333;
-    //   line-height: 65px;
-    // }
+    // padding-left: 139px;
     .titleTwo {
       width: 234px;
       height: 124px;
@@ -584,13 +579,14 @@ export default {
       font-weight: 600;
       color: #333333;
       line-height: 78px;
+      margin-bottom: 80px;
     }
   }
   .resultList {
     width: 1406px;
     height: fit-content;
     margin: 0 auto;
-    margin-top: 80px;
+    // margin-top: 80px;
     .year2021 {
       position: relative;
       width: 100%;
@@ -723,7 +719,7 @@ export default {
         border-radius: 5px;
         height: 660px;
         //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        background-color: #D7CCB8;
+        background-color: #d7ccb8;
       }
     }
   }

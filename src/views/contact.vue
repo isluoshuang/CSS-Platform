@@ -2,17 +2,25 @@
   <div class="contact-container">
     <div class="content">
       <div class="warp">
-        <img class="img1" src="../../static/newhHome/定位.png" alt="" />
+        <img class="img1"
+             src="../../static/newhHome/定位.png"
+             alt="" />
         <div class="addressTitle">地址</div>
         <div class="address">
           浙江大学紫金港校区公共管理学院一楼 杭州市余杭塘路866号  
         </div>
-        <img class="img2" src="../../static/newhHome/邮件.png" alt="" />
+        <img class="img2"
+             src="../../static/newhHome/邮件.png"
+             alt="" />
         <div class="emailTitle">邮箱</div>
         <div class="email">zjucss@zju.edu.cn</div>
-        <img class="img3" src="../../static/newhHome/微信.png" alt="" />
+        <img class="img3"
+             src="../../static/newhHome/微信.png"
+             alt="" />
         <div class="pubnumTitle">微信公众号</div>
-        <img class="img4" src="../../static/newhHome/wechatpub.png" alt="" />
+        <img class="img4"
+             src="../../static/newhHome/wechatpub.png"
+             alt="" />
       </div>
     </div>
   </div>
@@ -22,13 +30,13 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {};
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {},
 };
 </script>
@@ -114,7 +122,7 @@ export default {
         position: absolute;
         top: 103px;
         left: 108px;
-        width: 300px;
+        width: 340px;
         height: 64px;
         font-size: 20px;
         font-family: PingFangSC-Regular, PingFang SC;

@@ -1,7 +1,9 @@
 <template>
   <div class="longHome-container">
-    <v-header ref="header" ></v-header>
-    <div class="longHome-warp" ref="Box" @scroll="Scroll">
+    <v-header ref="header"></v-header>
+    <div class="longHome-warp"
+         ref="Box"
+         @scroll="Scroll">
       <QsMain id="mainWarp" />
       <introduce id="introduce" />
       <scientificPage id="scientificWarp" />
@@ -9,8 +11,8 @@
       <vir-laboratory id="virLaboratory" />
       <team id="team" />
       <result id="result" />
-      <news-trends id="newsTrends"/>
-      <contact id="contact"/>
+      <news-trends id="newsTrends" />
+      <contact id="contact" />
     </div>
   </div>
 </template>
@@ -40,27 +42,28 @@ export default {
     contact
   },
   props: {},
-  data() {
+  data () {
     return {};
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {
+  created () { },
+  mounted () {
     document.addEventListener("scroll", this.Scroll);
   },
   methods: {
-    sildeMethod(location) {
+    sildeMethod (location) {
       document.getElementById(location).scrollIntoView({
         behavior: "smooth", // 平滑过渡
         block: "start", // 上边框与视窗顶部平齐
       });
     },
-    Scroll(e) {
+    Scroll (e) {
       let scrollTop = this.$refs.Box.scrollTop;
       // console.log(scrollTop);
       let fristDivHeight = document.getElementById("mainWarp").clientHeight;
-      if (scrollTop + 112 >= fristDivHeight) {
+      // if (scrollTop + 112 >= fristDivHeight) {
+      if (scrollTop >= 112) {
         this.$refs.header.changeBackgroundTo();
       } else {
         this.$refs.header.changeBackgroundBack();

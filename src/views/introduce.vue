@@ -1,11 +1,14 @@
 <template>
   <div class="introduce-container">
-    <div class="title">
-      <img src="../../static/newhHome/about.png" alt="" class="about" />
-      <!-- <span class="who">我们是谁</span> -->
-      <span class="characteristic">中心介绍</span>
-    </div>
+
     <div class="introduce_content">
+      <div class="title">
+        <img src="../../static/newhHome/about.png"
+             alt=""
+             class="about" />
+        <!-- <span class="who">我们是谁</span> -->
+        <span class="characteristic">中心介绍</span>
+      </div>
       <div>
         计算社会科学研究中心于2018年依托浙江大学公共管理学院成立。中心结合浙江大学在社会科学、计算科学、工程科学等方面的有利条件，运用分布式人工智能等前沿技术工具，以社会治理、数字政府、智慧城市为主要研究对象，创新文科发展理念和学术研究范式。
       </div>
@@ -15,12 +18,11 @@
     </div>
     <div class="pic_content">
       <el-carousel height="779px">
-        <el-carousel-item v-for="item in imglist" :key="item">
-          <img
-            class="contentImg"
-            :src=item.url
-            alt=""
-          />
+        <el-carousel-item v-for="item in imglist"
+                          :key="item">
+          <img class="contentImg"
+               :src=item.url
+               alt="" />
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -31,19 +33,19 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {
-      imglist:[
-        {url:"static/newhHome/one.png"},
-        {url:"static/newhHome/two.png"},
-        {url:"static/newhHome/introductory.jpg"}
+      imglist: [
+        { url: "static/newhHome/one.png" },
+        { url: "static/newhHome/two.png" },
+        { url: "static/newhHome/introductory.jpg" }
       ]
     };
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {},
 };
 </script>
@@ -66,9 +68,6 @@ export default {
   padding-bottom: 191px;
   .title {
     position: relative;
-    // display: inline-block;
-    // margin-top: 170px;
-    // width: 1079px;
     height: 278px;
     .about {
       position: absolute;
@@ -78,23 +77,11 @@ export default {
       height: 201px;
       background: #fafbff #f5f9fa;
     }
-    // .who {
-    //   position: absolute;
-    //   top: 109px;
-    //   left: 257px;
-    //   width: 192px;
-    //   height: 65px;
-    //   font-size: 46px;
-    //   font-family: PingFangSC-Ultralight, PingFang SC;
-    //   font-weight: 200;
-    //   color: #333333;
-    //   line-height: 65px;
-    // }
     .characteristic {
       position: absolute;
       top: 120px;
       width: 234px;
-      left: 257px;
+      // left: 257px;
       height: 78px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
