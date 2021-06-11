@@ -5,43 +5,35 @@
       <div class="TwoT">我们的团队</div>
 
       <div class="avaterone">
-        <avatercom
-          v-for="(item, index) in list"
-          :key="index"
-          :Myavater="item.Myavater"
-          :Myname="item.Myname"
-          :Mypost="item.Mypost"
-        />
+        <avatercom v-for="(item, index) in list"
+                   :key="index"
+                   :Myavater="item.Myavater"
+                   :Myname="item.Myname"
+                   :Mypost="item.Mypost" />
       </div>
       <div class="btitle">博士研究生</div>
       <div class="avatertwo">
-        <avatercom
-          v-for="(item, index) in listby"
-          :key="index"
-          :Myavater="item.Myavater"
-          :Myname="item.Myname"
-          :Mypost="item.Mypost"
-        />
+        <avatercom v-for="(item, index) in listby"
+                   :key="index"
+                   :Myavater="item.Myavater"
+                   :Myname="item.Myname"
+                   :Mypost="item.Mypost" />
       </div>
       <div class="btitle">硕士研究生</div>
       <div class="avatertwo">
-        <avatercom
-          v-for="(item, index) in lists"
-          :key="index"
-          :Myavater="item.Myavater"
-          :Myname="item.Myname"
-          :Mypost="item.Mypost"
-        />
+        <avatercom v-for="(item, index) in lists"
+                   :key="index"
+                   :Myavater="item.Myavater"
+                   :Myname="item.Myname"
+                   :Mypost="item.Mypost" />
       </div>
       <div class="btitle">硕士毕业生</div>
       <div class="avatertwo">
-        <avatercom
-          v-for="(item, index) in listsb"
-          :key="index"
-          :Myavater="item.Myavater"
-          :Myname="item.Myname"
-          :Mypost="item.Mypost"
-        />
+        <avatercom v-for="(item, index) in listsb"
+                   :key="index"
+                   :Myavater="item.Myavater"
+                   :Myname="item.Myname"
+                   :Mypost="item.Mypost" />
       </div>
     </div>
   </div>
@@ -54,7 +46,7 @@ export default {
     avatercom,
   },
   props: {},
-  data() {
+  data () {
     return {
       list: [
         {
@@ -303,8 +295,8 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {},
 };
 </script>
@@ -316,6 +308,7 @@ export default {
   width: 100%;
   height: fit-content;
   padding-top: 190px;
+  padding-bottom: 191px;
   background: #fafafa;
   .titleWarp {
     width: 1452px;

@@ -1,7 +1,6 @@
 <template>
   <div class="newsTrends-container">
     <div class="titleWarp">
-      <!-- <div class="title1">更全面 更高效</div> -->
       <div class="title2">ZJUCSS新闻动态</div>
     </div>
     <div class="newWarp">
@@ -84,11 +83,13 @@ export default {
   display: block;
   min-width: 1170px;
   padding-top: 190px;
-  padding-left: 253px;
+  // padding-left: 253px;
   padding-bottom: 312px;
   background-color: #ffffff;
   overflow: hidden;
   .titleWarp {
+    width: 1405px;
+    margin: 0 auto;
     margin-bottom: 80px;
     // .title1 {
     //   height: 65px;
@@ -112,7 +113,7 @@ export default {
   .newWarp {
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 auto;
     width: 1405px;
     height: 759px;
     .leftNew {

@@ -62,8 +62,8 @@ export default {
       let scrollTop = this.$refs.Box.scrollTop;
       // console.log(scrollTop);
       let fristDivHeight = document.getElementById("mainWarp").clientHeight;
-      // if (scrollTop + 112 >= fristDivHeight) {
-      if (scrollTop >= 112) {
+      // if (scrollTop + 100 >= fristDivHeight) {
+      if (scrollTop >= 100) {
         this.$refs.header.changeBackgroundTo();
       } else {
         this.$refs.header.changeBackgroundBack();

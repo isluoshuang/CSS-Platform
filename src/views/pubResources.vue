@@ -112,6 +112,7 @@ export default {
   width: 100%;
   height: fit-content;
   padding-top: 190px;
+  padding-bottom: 191px;
   background-color: #104e5b;
   overflow: hidden;
   .xt1 {

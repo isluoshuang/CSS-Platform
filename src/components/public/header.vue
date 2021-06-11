@@ -1,54 +1,51 @@
 <template>
-  <div class="header-container" id="header">
+  <div class="header-container"
+       id="header">
     <ul class="titleStart">
       <a>
-        <img
-          class="icon"
-          @click="goto('mainWarp')"
-          src="../../../static/zjucss.png"
-        />
+        <img class="icon"
+             @click="goto('mainWarp')"
+             src="../../../static/zjucss.png" />
       </a>
     </ul>
     <ul class="titleEnd">
       <li>
-        <a class="tab"
-          ><span id="span" @click="goto('introduce')">中心介绍</span></a
-        >
+        <a class="tab"><span id="span"
+                @click="goto('introduce')">中心介绍</span></a>
+      </li>
+      <li>
+        <a class="tab"><span id="span"
+                @click="goto('scientificWarp')">科研领域</span></a>
       </li>
       <li>
         <a class="tab"
-          ><span id="span" @click="goto('scientificWarp')">科研领域</span></a
-        >
+           to="/pubResources"><span id="span"
+                @click="goto('pubResources')">公开资源</span></a>
       </li>
       <li>
-        <a class="tab" to="/pubResources"
-          ><span id="span" @click="goto('pubResources')">公开资源</span></a
-        >
+        <a class="tab"
+           to="/virLaboratory"><span id="span"
+                @click="goto('virLaboratory')">虚拟实验室</span></a>
       </li>
       <li>
-        <a class="tab" to="/virLaboratory"
-          ><span id="span" @click="goto('virLaboratory')">虚拟实验室</span></a
-        >
+        <a class="tab"
+           to="/team"><span id="span"
+                @click="goto('team')">科研团队</span></a>
       </li>
       <li>
-        <a class="tab" to="/team"
-          ><span id="span" @click="goto('team')">科研团队</span></a
-        >
+        <a class="tab"
+           to="/result"
+           @click="goto('result')"><span id="span">研究成果</span></a>
       </li>
       <li>
-        <a class="tab" to="/result" @click="goto('result')"
-          ><span id="span">研究成果</span></a
-        >
+        <a class="tab"
+           to="/newsTrends"><span id="span"
+                @click="goto('newsTrends')">新闻动态</span></a>
       </li>
       <li>
-        <a class="tab" to="/newsTrends"
-          ><span id="span" @click="goto('newsTrends')">新闻动态</span></a
-        >
-      </li>
-      <li>
-        <a class="tab" to="/contact"
-          ><span id="span" @click="goto('contact')">联系方式</span></a
-        >
+        <a class="tab"
+           to="/contact"><span id="span"
+                @click="goto('contact')">联系方式</span></a>
       </li>
     </ul>
   </div>
@@ -57,22 +54,22 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {};
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {
-    goto(location) {
+    goto (location) {
       this.$parent.sildeMethod(location);
     },
-    changeBackgroundTo() {
+    changeBackgroundTo () {
       let headerWarp = document.getElementById("header");
       headerWarp.style.backgroundColor = "#104e5b";
     },
-    changeBackgroundBack() {
+    changeBackgroundBack () {
       let headerWarp = document.getElementById("header");
       headerWarp.style.backgroundColor = "rgba(0, 0, 0, 0)";
     },
@@ -87,7 +84,7 @@ export default {
   position: fixed;
   width: 100%;
   min-width: 1170px;
-  height: 112px;
+  height: 100px;
   justify-content: space-between;
   z-index: 100;
   .titleStart {
@@ -103,7 +100,7 @@ export default {
     justify-content: space-evenly;
     width: 882px;
     margin-right: 257px;
-    padding-top: 47px;
+    padding-top: 43px;
     li {
       cursor: pointer;
       display: inline-block;

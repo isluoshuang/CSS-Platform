@@ -567,7 +567,7 @@ export default {
   width: 100%;
   height: fit-content;
   padding-top: 190px;
-  padding-bottom: 190px;
+  padding-bottom: 170px;
   background-color: #fff;
   .titleWarp {
     // padding-left: 139px;
