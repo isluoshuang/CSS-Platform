@@ -278,8 +278,8 @@ export default {
   .contentTwo {
     width: 1406px;
     margin: auto;
-    // margin-top: 34px;
-    margin-top: 186px;
+    margin-top: 34px;
+    // margin-top: 186px;
     margin-bottom: 30px;
     height: 50px;
     font-size: 36px;
