@@ -68,7 +68,7 @@ export default {
   padding-bottom: 191px;
   .title {
     position: relative;
-    height: 278px;
+    height: 236px;
     .about {
       position: absolute;
       // margin-left: 245px;
@@ -79,7 +79,7 @@ export default {
     }
     .characteristic {
       position: absolute;
-      top: 120px;
+      top: 78px;
       width: 234px;
       // left: 257px;
       height: 78px;
@@ -92,10 +92,9 @@ export default {
   }
   .introduce_content {
     width: 1405px;
-    height: 384px;
     margin: 0 auto;
     width: 1405px;
-    height: 192px;
+    height: 410px;
     font-size: 20px;
     font-family: PingFangSC-Light, PingFang SC;
     font-weight: 300;

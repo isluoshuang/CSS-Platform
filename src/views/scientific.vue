@@ -198,7 +198,7 @@ export default {
   min-width: 1170px;
   width: 100%;
   padding-top: 190px;
-  padding-bottom: 190px;
+  padding-bottom: 240px;
   background: #f5f9fa;
   .warp {
     width: 1405px;
@@ -217,14 +217,14 @@ export default {
       // }
       .characteristic {
         width: 1405px;
-        height: 143px;
+        // height: 143px;
         font-size: 56px;
         font-family: PingFangSC-Semibold, PingFang SC;
         font-weight: 600;
         color: #333333;
         line-height: 78px;
         // margin-left: 28px;
-        margin-bottom: 68px;
+        margin-bottom: 80px;
       }
     }
     .cardContent {

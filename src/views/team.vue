@@ -326,12 +326,13 @@ export default {
     }
     .TwoT {
       width: 293px;
-      height: 124px;
+      // height: 124px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;
       color: #333333;
       line-height: 78px;
+      margin-bottom: 80px;
     }
     .btitle {
       margin: 40px 0 20px 0px;
@@ -344,7 +345,7 @@ export default {
       line-height: 28px;
     }
     .avaterone {
-      margin-top: 58px;
+      // margin-top: 58px;
     }
     .avatertwo {
       width: 1452px;

@@ -100,7 +100,7 @@ export default {
     //   line-height: 65px;
     // }
     .title2 {
-      height: 124px;
+      // height: 124px;
       margin-top: 7px;
       margin-bottom: 80px;
       font-size: 56px;

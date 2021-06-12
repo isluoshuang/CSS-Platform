@@ -1,6 +1,8 @@
 <template>
   <div class="virLaboratory-container">
-    <img class="logoone" src="../../static//newhHome/zjucss.png" alt="" />
+    <img class="logoone"
+         src="../../static//newhHome/zjucss.png"
+         alt="" />
     <div class="contentFirst">
       <div class="titleWarp">
         <!-- <div class="title1">更全面 更高效</div> -->
@@ -18,37 +20,52 @@
       <div class="titleSmall">代表性工作：</div>
     </div>
     <div class="picShow">
-      <div class="pic picb1" @click="dialogVisible1 = true">
-        <img class="img" src="../../static//newhHome/hv1.svg" alt="" />
+      <div class="pic picb1"
+           @click="dialogVisible1 = true">
+        <img class="img"
+             src="../../static//newhHome/hv1.svg"
+             alt="" />
         <div class="t">
           <div>基于手机传感器的</div>
           <div>路面坑洞检测</div>
         </div>
       </div>
-      <div class="pic picb2" @click="dialogVisible2 = true">
-        <img class="img" src="../../static//newhHome/hv2.svg" alt="" />
+      <div class="pic picb2"
+           @click="dialogVisible2 = true">
+        <img class="img"
+             src="../../static//newhHome/hv2.svg"
+             alt="" />
         <div class="t">
           <div>网约车流量预测与</div>
           <div>可视化分析</div>
         </div>
       </div>
-      <div class="pic picb3" @click="dialogVisible3 = true">
-        <img class="img" src="../../static//newhHome/hv3.svg" alt="" />
+      <div class="pic picb3"
+           @click="dialogVisible3 = true">
+        <img class="img"
+             src="../../static//newhHome/hv3.svg"
+             alt="" />
         <div class="t">
           <div>网联环境下无人车</div>
           <div>轨迹优化</div>
         </div>
       </div>
-      <div class="pic picb4" @click="dialogVisible4 = true">
-        <img class="img" src="../../static//newhHome/hv4.svg" alt="" />
+      <div class="pic picb4"
+           @click="dialogVisible4 = true">
+        <img class="img"
+             src="../../static//newhHome/hv4.svg"
+             alt="" />
         <div class="t">
           <div>基于配送机器人的</div>
           <div>城市物流车辆</div>
           <div>路径优化</div>
         </div>
       </div>
-      <div class="pic picb5" @click="dialogVisible5 = true">
-        <img class="img" src="../../static//newhHome/hv5.svg" alt="" />
+      <div class="pic picb5"
+           @click="dialogVisible5 = true">
+        <img class="img"
+             src="../../static//newhHome/hv5.svg"
+             alt="" />
         <div class="t">
           <div>基于智慧城市的</div>
           <div>杭州TOD模式研究</div>
@@ -56,8 +73,12 @@
       </div>
     </div>
     <div class="dialogSty">
-      <el-dialog width="1200px" top="220px" :visible.sync="dialogVisible1">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="220px"
+                 :visible.sync="dialogVisible1">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">基于手机传感器的路面坑洞检测</div>
 
         <div class="content">
@@ -67,27 +88,25 @@
         </div>
         <div class="imags">
           <div class="imag">
-            <img
-              src="../../static/newhHome/基于手机传感器的路面坑洞检测1.png"
-              alt=""
-            />
+            <img src="../../static/newhHome/基于手机传感器的路面坑洞检测1.png"
+                 alt="" />
           </div>
           <div class="imag">
-            <img
-              src="../../static/newhHome/基于手机传感器的路面坑洞检测2.png"
-              alt=""
-            />
+            <img src="../../static/newhHome/基于手机传感器的路面坑洞检测2.png"
+                 alt="" />
           </div>
           <div class="imag">
-            <img
-              src="../../static/newhHome/基于手机传感器的路面坑洞检测3.png"
-              alt=""
-            />
+            <img src="../../static/newhHome/基于手机传感器的路面坑洞检测3.png"
+                 alt="" />
           </div>
         </div>
       </el-dialog>
-      <el-dialog width="1200px" top="150px" :visible.sync="dialogVisible2">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="150px"
+                 :visible.sync="dialogVisible2">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">网约车流量预测与可视化分析</div>
 
         <div class="content">
@@ -100,19 +119,19 @@
         </div>
         <div class="imags">
           <div class="imagt">
-            <img
-              src="../../static/newhHome/网约车流量预测与可视化分析.png"
-              alt=""
-            />
-            <img
-              src="../../static/newhHome/网约车流量预测与可视化分析2.png"
-              alt=""
-            />
+            <img src="../../static/newhHome/网约车流量预测与可视化分析.png"
+                 alt="" />
+            <img src="../../static/newhHome/网约车流量预测与可视化分析2.png"
+                 alt="" />
           </div>
         </div>
       </el-dialog>
-      <el-dialog width="1200px" top="150px" :visible.sync="dialogVisible3">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="150px"
+                 :visible.sync="dialogVisible3">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">网联环境下无人车轨迹优化</div>
 
         <div class="content">
@@ -129,19 +148,19 @@
         </div>
         <div class="imags">
           <div class="imag">
-            <img
-              src="../../static/newhHome/网联环境下无人车轨迹优化.png"
-              alt=""
-            />
-            <img
-              src="../../static/newhHome/网联环境下无人车轨迹优化2.png"
-              alt=""
-            />
+            <img src="../../static/newhHome/网联环境下无人车轨迹优化.png"
+                 alt="" />
+            <img src="../../static/newhHome/网联环境下无人车轨迹优化2.png"
+                 alt="" />
           </div>
         </div>
       </el-dialog>
-      <el-dialog width="1200px" top="220px" :visible.sync="dialogVisible4">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="220px"
+                 :visible.sync="dialogVisible4">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">基于配送机器人的城市物流车辆路径优化</div>
 
         <div class="content">
@@ -150,15 +169,17 @@
         </div>
         <div class="imags">
           <div class="imagt">
-            <img
-              src="../../static/newhHome/基于配送机器人的城市物流车辆路径优化.png"
-              alt=""
-            />
+            <img src="../../static/newhHome/基于配送机器人的城市物流车辆路径优化.png"
+                 alt="" />
           </div>
         </div>
       </el-dialog>
-      <el-dialog width="1200px" top="150px" :visible.sync="dialogVisible5">
-        <img class="logo" src="../../static/newhHome/zjucss.png" alt="" />
+      <el-dialog width="1200px"
+                 top="150px"
+                 :visible.sync="dialogVisible5">
+        <img class="logo"
+             src="../../static/newhHome/zjucss.png"
+             alt="" />
         <div class="title">基于智慧城市的杭州TOD模式研究</div>
 
         <div class="content">
@@ -172,16 +193,12 @@
         </div>
         <div class="imags">
           <div class="imagt">
-            <img
-              style="width: 534px"
-              src="../../static/newhHome/基于智慧城市的杭州TOD模式研究.png"
-              alt=""
-            />
-            <img
-              style="width: 462px"
-              src="../../static/newhHome/基于智慧城市的杭州TOD模式研究2.png"
-              alt=""
-            />
+            <img style="width: 534px"
+                 src="../../static/newhHome/基于智慧城市的杭州TOD模式研究.png"
+                 alt="" />
+            <img style="width: 462px"
+                 src="../../static/newhHome/基于智慧城市的杭州TOD模式研究2.png"
+                 alt="" />
           </div>
         </div>
       </el-dialog>
@@ -193,7 +210,7 @@
 export default {
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       dialogVisible1: false,
       dialogVisible2: false,
@@ -204,8 +221,8 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () { },
+  mounted () { },
   methods: {},
 };
 </script>
@@ -239,7 +256,7 @@ export default {
     // }
     .title2 {
       width: 293px;
-      height: 124px;
+      // height: 124px;
       margin-top: 7px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
@@ -251,7 +268,7 @@ export default {
   .contentFirst {
     margin: 0 auto;
     width: 1406px;
-    height: 152px;
+    // height: 152px;
     font-size: 20px;
     font-family: PingFangSC-Light, PingFang SC;
     font-weight: 300;

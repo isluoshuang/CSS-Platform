@@ -573,7 +573,7 @@ export default {
     // padding-left: 139px;
     .titleTwo {
       width: 234px;
-      height: 124px;
+      // height: 124px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;

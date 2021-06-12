@@ -88,11 +88,12 @@ export default {
   justify-content: space-between;
   z-index: 100;
   .titleStart {
+    line-height: 100px;
     .icon {
       height: 34px;
       width: 167px;
       margin-left: 54px;
-      margin-top: 38px;
+      margin-top: 33px;
     }
   }
   .titleEnd {
@@ -100,11 +101,12 @@ export default {
     justify-content: space-evenly;
     width: 882px;
     margin-right: 257px;
-    padding-top: 43px;
+    // padding-top: 43px;
     li {
       cursor: pointer;
       display: inline-block;
       height: 100%;
+      line-height: 100px;
       list-style: none;
       .tab {
         text-decoration: none;

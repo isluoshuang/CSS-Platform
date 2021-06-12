@@ -126,7 +126,7 @@ export default {
     bottom: 0;
   }
   .titleWarp {
-    margin-bottom: 91px;
+    margin-bottom: 80px;
     // padding-left: 256px;
     // .Twirter {
     //   width: 384px;
@@ -139,7 +139,7 @@ export default {
     // }
     .Pus {
       width: 1405px;
-      height: 124px;
+      // height: 124px;
       font-size: 56px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;
@@ -154,8 +154,8 @@ export default {
     flex-wrap: wrap;
     margin: 0 auto;
     width: 1405px;
-    height: 932px;
-    margin-bottom: 191px;
+    height: 1091px;
+    // margin-bottom: 191px;
     .pcard {
       position: relative;
       width: 684px;
